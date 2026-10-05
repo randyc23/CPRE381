@@ -13,10 +13,10 @@ end rev_mux;
 architecture structural of rev_mux is
     component mux2t1_n is
       generic(N : integer);
-      port(s0               : in std_logic;
-           iA               : in std_logic_vector(N-1 downto 0);
-           iB               : in std_logic_vector(N-1 downto 0);
-           oC               : out std_logic_vector(N-1 downto 0));
+      port(i_S              : in std_logic;
+           i_D0             : in std_logic_vector(N-1 downto 0);
+           i_D1             : in std_logic_vector(N-1 downto 0);
+           o_O              : out std_logic_vector(N-1 downto 0));
     end component;
 
     signal s_rev : std_logic_vector(WIDTH-1 downto 0);
@@ -28,8 +28,8 @@ begin
 
     g1: mux2t1_n
         generic map(N => WIDTH)
-        port map(s0 => dir,
-                 iA => d_in,
-                 iB => s_rev,
-                 oC => d_rev);
+        port map(i_S => dir,
+                 i_D0 => d_in,
+                 i_D1 => s_rev,
+                 o_O => d_rev);
 end structural;

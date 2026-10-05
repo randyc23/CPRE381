@@ -13,10 +13,10 @@ end shift8;
 architecture structural of shift8 is
     component mux2t1_n is
       generic(N : integer);
-      port(s0               : in std_logic;
-           iA               : in std_logic_vector(N-1 downto 0);
-           iB               : in std_logic_vector(N-1 downto 0);
-           oC               : out std_logic_vector(N-1 downto 0));
+      port(i_S              : in std_logic;
+           i_D0             : in std_logic_vector(N-1 downto 0);
+           i_D1             : in std_logic_vector(N-1 downto 0);
+           o_O              : out std_logic_vector(N-1 downto 0));
     end component;
 
     signal B : std_logic_vector(WIDTH-1 downto 0);
@@ -28,8 +28,8 @@ begin
 
     g1: mux2t1_n
         generic map(N => WIDTH)
-        port map(s0 => shift,
-                 iA => Ip,
-                 iB => B,
-                 oC => Shifted);
+        port map(i_S => shift,
+                 i_D0 => Ip,
+                 i_D1 => B,
+                 o_O => Shifted);
 end structural;

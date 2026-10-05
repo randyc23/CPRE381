@@ -71,11 +71,13 @@ architecture structural of bidir_shift is
 
     begin
 
-    g_fill: fill_logic
+    -- if arith = 1, fill_bit = sign_bit, else fill_bit = 0 -> sra/srai => arith = 1, srl/srli => arith = 0
+    g_fill: fill_logic 
         port map(arith => arith,
                  sign_bit => Ip(WIDTH-1),
                  bit_fill => fill_bit);
     
+    -- if direction = 0 => left shift, if direction = 1 => right shift
     g_rev: rev_mux
         generic map(WIDTH => WIDTH)
         port map(dir => direction,
@@ -112,6 +114,7 @@ architecture structural of bidir_shift is
                  fill => fill_bit,
                  Ip => shifted4,
                  Shifted => rev_shift);
+     -- if direction = 0 => left shift, if direction = 1 => right shift
     g_rev2: rev_mux
         generic map(WIDTH => WIDTH)
         port map(dir => direction,

@@ -7,6 +7,7 @@ entity Full_Adder_N is
        i_A         : in std_logic_vector(N-1 downto 0);
        i_B         : in std_logic_vector(N-1 downto 0);
        o_S         : out std_logic_vector(N-1 downto 0);
+       o_Cin_last   : out std_logic;  
        o_Cout      : out std_logic);
 end Full_Adder_N;
 
@@ -22,7 +23,7 @@ architecture mixed of Full_Adder_N is
 
   -- Signal to transport carry weights through adder
   signal s_Cout     : std_logic_Vector(N-2 downto 0);
-
+  signal s_Cin_last : std_logic;
   signal s_temp_sum : std_logic_vector(N-1 downto 0);
   signal s_temp_cout : std_logic;
 
@@ -39,8 +40,8 @@ begin
              iB => i_B(N-1), 
              s0 => s_temp_sum(N-1), 
              Cout => s_temp_cout);
-
+  s_Cin_last <= s_Cout(N-2);
   o_S <= s_temp_sum;
   o_Cout <= s_temp_cout;
-  
+  o_Cin_last <= s_Cin_last;
 end mixed;

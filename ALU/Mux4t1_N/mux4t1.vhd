@@ -16,7 +16,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity mux2t1 is
+entity mux4t1 is
   port(s               : in std_logic_vector(1 downto 0);
        i0               : in std_logic;
        i1               : in std_logic;
@@ -24,9 +24,9 @@ entity mux2t1 is
        i3               : in std_logic;
        oC               : out std_logic);
 
-end mux2t1;
+end mux4t1;
 
-architecture structure of mux2t1 is
+architecture structure of mux4t1 is
 
   component mux2t1 is 
     port(s0               : in std_logic;
@@ -39,8 +39,8 @@ architecture structure of mux2t1 is
   signal m1         : std_Logic;
   
 begin
-  g1: mux2t1 port map (s0 => s[0], iA => i0, iB => i1, oC => m0);
-  g2: mux2t1 port map(s0 => s[0], iA => i2, iB => i3, oC => m1);
-  g3: mux2t1 port map(s0 => s[1], iA => m0, iB => m1, oC => oC);
+  g1: mux2t1 port map (s0 => s(0), iA => i0, iB => i1, oC => m0);
+  g2: mux2t1 port map(s0 => s(0), iA => i2, iB => i3, oC => m1);
+  g3: mux2t1 port map(s0 => s(1), iA => m0, iB => m1, oC => oC);
 end structure;
 
