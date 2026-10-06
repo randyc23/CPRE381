@@ -4,6 +4,7 @@ use IEEE.std_logic_1164.all;
 entity add_sub_N is
   generic(WIDTH : integer := 32);
   port(i_sub          : in std_logic;
+       i_unsigned     : in std_logic;
        i_A            : in std_logic_vector(WIDTH-1 downto 0);
        i_B            : in std_logic_vector(WIDTH-1 downto 0);
        o_S            : out std_logic_vector(WIDTH-1 downto 0);
@@ -27,11 +28,25 @@ architecture mixed of add_sub_N is
          o_Cin_last : out std_logic);
   end component;
 
+  component mux2t1 is
+    port(s0               : in std_logic;
+         iA               : in std_logic;
+         iB               : in std_logic;
+         oC               : out std_logic);
+  end component;
+
+  component invg is 
+    port(i_A                  : in std_logic;
+         o_F                : out std_logic);
+  end component;
+
   signal i_Bxor : std_logic_vector(WIDTH-1 downto 0);
   signal as_out : std_logic_vector(WIDTH-1 downto 0);
   signal cin_last : std_logic;
   signal carry_out : std_logic;
   signal ovf : std_logic;
+  signal less_signed : std_logic;
+  signal less_unsigned : std_logic;
   signal less_bit : std_logic;
   
 
@@ -49,7 +64,9 @@ begin
              o_Cout => carry_out,
              o_Cin_last => cin_last);
   G_OVF: xorg2 port map(i_A => cin_last, i_B => carry_out, o_F => ovf);
-  G_Less: xorg2 port map(i_A => as_out(WIDTH-1), i_B => ovf, o_F => less_bit);
+  G_Less: xorg2 port map(i_A => as_out(WIDTH-1), i_B => ovf, o_F => less_signed);
+  G_Less_Unsigned: invg port map(i_A => carry_out, o_F => less_unsigned);
+  G_Less_Mux: mux2t1 port map(s0 => i_unsigned, iA => less_signed, iB => less_unsigned, oC => less_bit);
 
   o_S <= as_out;
   less(0)                <= less_bit;

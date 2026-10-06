@@ -33,12 +33,6 @@ architecture structural of LgcCtrlr is
             o_F                  : out std_logic_vector(N-1 downto 0));
     end component;
 
-    component norg_n is
-        generic(N : integer); -- Generic of type integer for input/output data width. Default value is 32.
-        port(i_A                  : in std_logic_vector(N-1 downto 0);
-            i_B                 : in std_logic_vector(N-1 downto 0);
-            o_F                  : out std_logic_vector(N-1 downto 0));
-    end component;
 
     component mux4t1_n is
         generic(N : integer); -- Generic of type integer for input/output data width. Default value is 32.
@@ -50,7 +44,7 @@ architecture structural of LgcCtrlr is
             o_O          : out std_logic_vector(N-1 downto 0));
     end component;
 
-    signal s_and, s_or, s_xor, s_nor : std_logic_vector(N-1 downto 0);  
+    signal s_and, s_or, s_xor : std_logic_vector(N-1 downto 0);  
 
     begin
         g_and: andg_n generic map(N => N) port map(
@@ -65,16 +59,12 @@ architecture structural of LgcCtrlr is
             i_A      => i_A,
             i_B     => i_B,  
             o_F      => s_xor);
-        g_nor: norg_n generic map(N => N) port map(
-            i_A      => i_A,
-            i_B     => i_B,
-            o_F      => s_nor);
         g_mux: mux4t1_n generic map(N => N) port map(
             i_S      => sel,
             i_D0     => s_and,
             i_D1     => s_or,
             i_D2     => s_xor,
-            i_D3     => s_nor,
+            i_D3     => (others => '0'),
             o_O      => o_F);
 
 end structural;
