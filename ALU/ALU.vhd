@@ -97,7 +97,7 @@ begin
                  sel => AluCtrl(1 downto 0),
                  o_F => logic_ctrl_out);
 
-    G_ARITH: andg2 port map(i_A => AluCtrl(1), i_B => AluCtrl(0), o_F => shift_arith);
+    G_ARITH: andg2 port map(i_A => AluCtrl(1), i_B => AluCtrl(0), o_F => shift_arith); -- ensure arith = 1 only for sra/srai and sla/slai never happens
                 
     G_BIDIR_SHIFT: bidir_shift
         generic map(WIDTH => WIDTH)

@@ -1,0 +1,822 @@
+# //  Questa Sim-64
+# //  Version 2026.2 linux_x86_64 May 18 2026
+# //
+# // Unpublished work. Copyright 2026 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+vlib work
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/xorg2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:34 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/xorg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity xorg2
+# -- Compiling architecture dataflow of xorg2
+# vcom: End time: 14:10:34 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/org2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:34 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/org2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# vcom: End time: 14:10:34 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/invg.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:34 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/invg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# vcom: End time: 14:10:34 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/invg.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:34 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/invg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# vcom: End time: 14:10:35 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/mux2t1.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:35 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/mux2t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2t1
+# -- Compiling architecture structure of mux2t1
+# vcom: End time: 14:10:35 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/andg2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:40 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/andg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# vcom: End time: 14:10:40 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/Full_Adder.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:43 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/Full_Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Full_Adder
+# -- Compiling architecture structure of Full_Adder
+# vcom: End time: 14:10:43 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/Full_Adder_N.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:45 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/Full_Adder_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Full_Adder_N
+# -- Compiling architecture mixed of Full_Adder_N
+# vcom: End time: 14:10:45 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/add_sub_N.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:10:47 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/add_sub_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity add_sub_N
+# -- Compiling architecture mixed of add_sub_N
+# vcom: End time: 14:10:47 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift1.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:11 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shift1
+# -- Compiling architecture structural of shift1
+# vcom: End time: 14:11:11 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:11 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift2
+# -- Compiling architecture structural of shift2
+# vcom: End time: 14:11:11 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift4.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:11 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift4
+# -- Compiling architecture structural of shift4
+# vcom: End time: 14:11:11 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift8.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:11 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift8.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift8
+# -- Compiling architecture structural of shift8
+# vcom: End time: 14:11:11 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift16.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:11 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/shift16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shift16
+# -- Compiling architecture structural of shift16
+# vcom: End time: 14:11:11 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/fill_logic.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:15 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/fill_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity fill_logic
+# -- Compiling architecture dataflow of fill_logic
+# vcom: End time: 14:11:15 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:17 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1.vhd(19): (vcom-1615) Existing entity 'mux2t1' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/mux2t1.vhd(19) will be overwritten.
+# -- Compiling entity mux2t1
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1.vhd(27): (vcom-1615) Existing architecture 'mux2t1(structure)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/mux2t1.vhd(27) will be overwritten.
+# -- Compiling architecture structure of mux2t1
+# vcom: End time: 14:11:17 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1_N.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:19 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture structural of mux2t1_N
+# vcom: End time: 14:11:19 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/reverse_mux.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:21 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/reverse_mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rev_mux
+# -- Compiling architecture structural of rev_mux
+# vcom: End time: 14:11:21 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/bidir_shift.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:24 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/bidir_shift.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bidir_shift
+# -- Compiling architecture structural of bidir_shift
+# vcom: End time: 14:11:24 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/org2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:45 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/org2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/org2.vhd(23): (vcom-1615) Existing entity 'org2' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/org2.vhd(23) will be overwritten.
+# -- Compiling entity org2
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/org2.vhd(31) will be overwritten.
+# -- Compiling architecture dataflow of org2
+# vcom: End time: 14:11:45 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/xorg2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:45 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/xorg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/xorg2.vhd(23) will be overwritten.
+# -- Compiling entity xorg2
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/xorg2.vhd(31) will be overwritten.
+# -- Compiling architecture dataflow of xorg2
+# vcom: End time: 14:11:45 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux2t1.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:45 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux2t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux2t1.vhd(19): (vcom-1615) Existing entity 'mux2t1' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1.vhd(19) will be overwritten.
+# -- Compiling entity mux2t1
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux2t1.vhd(27): (vcom-1615) Existing architecture 'mux2t1(structure)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1.vhd(27) will be overwritten.
+# -- Compiling architecture structure of mux2t1
+# vcom: End time: 14:11:45 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/invg.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:45 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/invg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/invg.vhd(23): (vcom-1615) Existing entity 'invg' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/invg.vhd(23) will be overwritten.
+# -- Compiling entity invg
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/invg.vhd(30) will be overwritten.
+# -- Compiling architecture dataflow of invg
+# vcom: End time: 14:11:45 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/andg2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:11:45 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/andg2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/andg2.vhd(23) will be overwritten.
+# -- Compiling entity andg2
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/AddSub/andg2.vhd(31) will be overwritten.
+# -- Compiling architecture dataflow of andg2
+# vcom: End time: 14:11:45 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/invg_n.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:00 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/invg_n.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity invg_n
+# -- Compiling architecture structural of invg_n
+# vcom: End time: 14:12:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/andg_n.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:00 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/andg_n.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg_n
+# -- Compiling architecture structural of andg_n
+# vcom: End time: 14:12:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/org_n.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:00 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/org_n.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org_n
+# -- Compiling architecture structural of org_n
+# vcom: End time: 14:12:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/xorg_n.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:00 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/xorg_n.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity xorg_n
+# -- Compiling architecture structural of xorg_n
+# vcom: End time: 14:12:00 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux4t1.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:04 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux4t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux4t1
+# -- Compiling architecture structure of mux4t1
+# vcom: End time: 14:12:04 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux4t1_N.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:07 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture structural of mux4t1_N
+# vcom: End time: 14:12:07 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/norg_n.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:14 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/norg_n.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity norg_n
+# -- Compiling architecture structural of norg_n
+# vcom: End time: 14:12:14 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/LgcCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:16 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/LgcCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LgcCtrlr
+# -- Compiling architecture structural of LgcCtrlr
+# vcom: End time: 14:12:16 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux2t1.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:29 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux2t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux2t1.vhd(19): (vcom-1615) Existing entity 'mux2t1' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux2t1.vhd(19) will be overwritten.
+# -- Compiling entity mux2t1
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux2t1.vhd(27): (vcom-1615) Existing architecture 'mux2t1(structure)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux2t1.vhd(27) will be overwritten.
+# -- Compiling architecture structure of mux2t1
+# vcom: End time: 14:12:29 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux2t1_N.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:31 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux2t1_N.vhd(21): (vcom-1615) Existing entity 'mux2t1_N' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1_N.vhd(21) will be overwritten.
+# -- Compiling entity mux2t1_N
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux2t1_N.vhd(30): (vcom-1615) Existing architecture 'mux2t1_N(structural)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/BiShifter/mux2t1_N.vhd(30) will be overwritten.
+# -- Compiling architecture structural of mux2t1_N
+# vcom: End time: 14:12:32 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux4t1.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:34 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux4t1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux4t1.vhd(19): (vcom-1615) Existing entity 'mux4t1' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux4t1.vhd(19) will be overwritten.
+# -- Compiling entity mux4t1
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux4t1.vhd(29): (vcom-1615) Existing architecture 'mux4t1(structure)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux4t1.vhd(29) will be overwritten.
+# -- Compiling architecture structure of mux4t1
+# vcom: End time: 14:12:34 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux4t1_N.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:35 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux4t1_N.vhd(21): (vcom-1615) Existing entity 'mux4t1_N' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux4t1_N.vhd(21) will be overwritten.
+# -- Compiling entity mux4t1_N
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/Mux4t1_N/mux4t1_N.vhd(32): (vcom-1615) Existing architecture 'mux4t1_N(structural)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/mux4t1_N.vhd(32) will be overwritten.
+# -- Compiling architecture structural of mux4t1_N
+# vcom: End time: 14:12:36 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/ALU.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:41 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu
+# -- Compiling architecture structural of alu
+# vcom: End time: 14:12:41 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/tb_ALU.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 14:12:45 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/tb_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/tb_ALU.vhd(5): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+# -- Compiling entity tb_alu
+# -- Compiling architecture mixed of tb_alu
+# vcom: End time: 14:12:45 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim work.tb_alu -voptargs=+acc
+# ** Note: (vsim-220) '/usr/local/mentor/questasim/linux_x86_64/../questa.ini' is used as the ini file.
+# vsim work.tb_alu -voptargs="+acc" 
+# Start time: 14:13:06 on Oct 08,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_alu(mixed)#1
+# Loading work.alu(structural)#1
+# Loading work.add_sub_n(mixed)#1
+# Loading work.xorg2(dataflow)#1
+# Loading work.full_adder_n(mixed)#1
+# Loading ieee.numeric_std(body)
+# Loading work.full_adder(structure)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.invg(dataflow)#1
+# Loading work.mux2t1(structure)#1
+# Loading work.lgcctrlr(structural)#1
+# Loading work.andg_n(structural)#1
+# Loading work.org_n(structural)#1
+# Loading work.xorg_n(structural)#1
+# Loading work.mux4t1_n(structural)#1
+# Loading work.mux4t1(structure)#1
+# Loading work.bidir_shift(structural)#1
+# Loading work.fill_logic(dataflow)#1
+# Loading work.rev_mux(structural)#1
+# Loading work.mux2t1_n(structural)#1
+# Loading work.shift1(structural)#1
+# Loading work.shift2(structural)#1
+# Loading work.shift4(structural)#1
+# Loading work.shift8(structural)#1
+# Loading work.shift16(structural)#1
+run 3000
+# ** Note: All test cases complete
+#    Time: 685 ns  Iteration: 0  Instance: /tb_alu
+add wave -position insertpoint sim:/tb_alu/*
+run 3000
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+run 3000
+# ** Note: All test cases complete
+#    Time: 685 ns  Iteration: 0  Instance: /tb_alu
+add wave -position insertpoint sim:/tb_alu/DUT0/G_BIDIR_SHIFT/*
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+run 3000
+# ** Note: All test cases complete
+#    Time: 685 ns  Iteration: 0  Instance: /tb_alu
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# vsim: End time: 15:05:38 on Oct 08,2026, Elapsed time: 0:52:32
+# Errors: 0, Warnings: 1
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/andg3.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:05:57 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/andg3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg3
+# -- Compiling architecture dataflow of andg3
+# vcom: End time: 15:05:57 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/andg4.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:05:57 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/andg4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg4
+# -- Compiling architecture dataflow of andg4
+# vcom: End time: 15:05:57 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/andg5.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:05:57 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/andg5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg5
+# -- Compiling architecture dataflow of andg5
+# vcom: End time: 15:05:57 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org4.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:05:57 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org4
+# -- Compiling architecture dataflow of org4
+# vcom: End time: 15:05:57 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:06:01 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity aluctrlr
+# -- Compiling architecture dataflow of aluctrlr
+# vcom: End time: 15:06:01 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:06:03 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd(5): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+# -- Compiling entity tb_aluctrlr
+# -- Compiling architecture mixed of tb_aluctrlr
+# vcom: End time: 15:06:03 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work.tb_aluctrlr
+# ** Note: (vsim-220) '/usr/local/mentor/questasim/linux_x86_64/../questa.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.tb_aluctrlr 
+# Start time: 15:06:19 on Oct 08,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_aluctrlr(mixed)#1
+# Loading work.aluctrlr(dataflow)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.andg4(dataflow)#1
+# Loading work.andg5(dataflow)#1
+# Loading work.andg3(dataflow)#1
+# Loading work.org4(dataflow)#1
+add wave -position insertpoint sim:/tb_aluctrlr/*
+run 700
+# ** Error: I: 0 001 expected 1100
+#    Time: 145 ns  Iteration: 0  Instance: /tb_aluctrlr
+# ** Error: I: 0 011 expected 0111
+#    Time: 205 ns  Iteration: 0  Instance: /tb_aluctrlr
+# ** Error: I: 1 011 expected 0111
+#    Time: 225 ns  Iteration: 0  Instance: /tb_aluctrlr
+# ** Error: R: 0 001 expected 1100
+#    Time: 445 ns  Iteration: 0  Instance: /tb_aluctrlr
+# ** Error: R: 0 011 expected 0111
+#    Time: 485 ns  Iteration: 0  Instance: /tb_aluctrlr
+run 200
+quit -sim
+# vsim: End time: 15:57:54 on Oct 08,2026, Elapsed time: 0:51:35
+# Errors: 5, Warnings: 1
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org3.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:58:02 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org3.vhd(23): (vcom-1615) Existing entity 'org2' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/org2.vhd(23) will be overwritten.
+# -- Compiling entity org2
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org3.vhd(32): (vcom-1615) Existing architecture 'org2(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU/LogicCtrl/org2.vhd(31) will be overwritten.
+# -- Compiling architecture dataflow of org2
+# vcom: End time: 15:58:02 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:58:15 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org2.vhd(23): (vcom-1615) Existing entity 'org2' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org3.vhd(23) will be overwritten.
+# -- Compiling entity org2
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org3.vhd(32) will be overwritten.
+# -- Compiling architecture dataflow of org2
+# vcom: End time: 15:58:15 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org2.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:58:37 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# vcom: End time: 15:58:37 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org3.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:58:40 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/org3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity org3
+# -- Compiling architecture dataflow of org3
+# vcom: End time: 15:58:40 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 15:58:46 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity aluctrlr
+# -- Compiling architecture dataflow of aluctrlr
+# ** Error: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(77): near "=>": (vcom-1576) expecting ',' or ')'.
+# ** Error: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(78): Statement cannot be labeled.
+# ** Error (suppressible): /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(78): (vcom-1141) Identifier "org3" does not identify a component declaration.
+# ** Note: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(87): VHDL Compiler exiting
+# vcom: End time: 15:58:46 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 16:00:11 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity aluctrlr
+# -- Compiling architecture dataflow of aluctrlr
+# ** Error (suppressible): /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(78): (vcom-1141) Identifier "org3" does not identify a component declaration.
+# ** Error: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(81): Symbol "G_AND6" has already been declared in this region.
+# ** Error: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(82): Symbol "G_AND7" has already been declared in this region.
+# ** Note: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(87): VHDL Compiler exiting
+# vcom: End time: 16:00:11 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 16:00:31 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity aluctrlr
+# -- Compiling architecture dataflow of aluctrlr
+# ** Error (suppressible): /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(78): (vcom-1141) Identifier "org3" does not identify a component declaration.
+# ** Note: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd(87): VHDL Compiler exiting
+# vcom: End time: 16:00:31 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 16:00:38 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd(5): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+# -- Compiling entity tb_aluctrlr
+# -- Compiling architecture mixed of tb_aluctrlr
+# vcom: End time: 16:00:38 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work.tb_aluctrlr
+# ** Note: (vsim-220) '/usr/local/mentor/questasim/linux_x86_64/../questa.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.tb_aluctrlr 
+# Start time: 16:00:53 on Oct 08,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_aluctrlr(mixed)#1
+# Loading work.aluctrlr(dataflow)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.andg4(dataflow)#1
+# Loading work.andg5(dataflow)#1
+# Loading work.andg3(dataflow)#1
+# Loading work.org4(dataflow)#1
+add wave -position insertpoint sim:/tb_aluctrlr/*
+run 700
+# ** Error: I: 0 001 expected 1100
+#    Time: 145 ns  Iteration: 0  Instance: /tb_aluctrlr
+# ** Error: I: 0 011 expected 0111
+#    Time: 205 ns  Iteration: 0  Instance: /tb_aluctrlr
+# ** Error: I: 1 011 expected 0111
+#    Time: 225 ns  Iteration: 0  Instance: /tb_aluctrlr
+# ** Error: R: 0 001 expected 1100
+#    Time: 445 ns  Iteration: 0  Instance: /tb_aluctrlr
+# ** Error: R: 0 011 expected 0111
+#    Time: 485 ns  Iteration: 0  Instance: /tb_aluctrlr
+quit -sim
+# vsim: End time: 16:08:43 on Oct 08,2026, Elapsed time: 0:07:50
+# Errors: 5, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 16:08:51 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/ALUCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity aluctrlr
+# -- Compiling architecture dataflow of aluctrlr
+# vcom: End time: 16:08:51 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd}
+# QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+# Start time: 16:08:55 on Oct 08,2026
+# vcom -reportprogress 300 -work work /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# ** Warning: /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/ALU Control/tb_ALUCtrlr.vhd(5): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+# -- Compiling entity tb_aluctrlr
+# -- Compiling architecture mixed of tb_aluctrlr
+# vcom: End time: 16:08:55 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work.tb_aluctrlr
+# ** Note: (vsim-220) '/usr/local/mentor/questasim/linux_x86_64/../questa.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.tb_aluctrlr 
+# Start time: 16:09:05 on Oct 08,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_aluctrlr(mixed)#1
+# Loading work.aluctrlr(dataflow)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.andg3(dataflow)#1
+# Loading work.andg4(dataflow)#1
+# Loading work.org3(dataflow)#1
+# Loading work.andg5(dataflow)#1
+# Loading work.org4(dataflow)#1
+add wave -position insertpoint sim:/tb_aluctrlr/*
+run 700

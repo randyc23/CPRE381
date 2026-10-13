@@ -63,9 +63,16 @@ begin
              o_S => as_out, 
              o_Cout => carry_out,
              o_Cin_last => cin_last);
+
+  -- overflow occurs when the carry into the MSB is different than the carry out of the MSB
   G_OVF: xorg2 port map(i_A => cin_last, i_B => carry_out, o_F => ovf);
+  -- less than signed is equal to result MSB xor overflow
   G_Less: xorg2 port map(i_A => as_out(WIDTH-1), i_B => ovf, o_F => less_signed);
+
+  -- set less than (slt) based on unsigned comparison -> if A < B, the carry out of the MSB will be 0, otherwise it will be 1. So we can invert the carry out to get the less than result.
   G_Less_Unsigned: invg port map(i_A => carry_out, o_F => less_unsigned);
+
+  -- select between signed and unsigned less than based on i_unsigned input (0 = signed, 1 = unsigned)
   G_Less_Mux: mux2t1 port map(s0 => i_unsigned, iA => less_signed, iB => less_unsigned, oC => less_bit);
 
   o_S <= as_out;

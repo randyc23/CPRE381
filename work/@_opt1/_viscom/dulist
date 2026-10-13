@@ -1,0 +1,10 @@
+2 4 invg 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 5 0
+2 5 andg2 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 7 0
+2 4 org2 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 7 0
+2 5 andg3 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 10 0
+2 5 andg4 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 13 0
+1 4 org3 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 10 0
+2 5 andg5 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 16 0
+2 4 org4 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 13 0
+1 8 aluctrlr 8 dataflow 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 325 0
+2 11 tb_aluctrlr 5 mixed 61 /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/work 1 65 0 0 442 0
