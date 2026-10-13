@@ -98,3 +98,12 @@ architecture structural of RISCV_single_cycle is
         );
     end component;
 
+    component immgen is 
+        generic(WIDTH : integer := 32);
+        port (inst : std_logic_vector(WIDTH-1 downto 0);
+              immediate : std_logic_vector(WIDTH-1 downto 0));
+    end component;
+
+    
+
+
