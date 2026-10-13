@@ -14,12 +14,12 @@ entity regfile is
         iCLK     : in std_logic;
         iRST     : in std_logic;
         iWE      : in std_logic;
-        wr_sele   : in std_logic_vector(WR_SEL - 1 downto 0);
-        rd_sel1  : in std_logic_vector(RD_SEL - 1 downto 0);
-        rd_sel2  : in std_logic_vector(RD_SEL - 1 downto 0);
+        wraddr   : in std_logic_vector(WR_SEL - 1 downto 0);
+        rs1  : in std_logic_vector(RD_SEL - 1 downto 0);
+        rs2  : in std_logic_vector(RD_SEL - 1 downto 0);
         i_Din    : in std_logic_vector(DATA_WIDTH - 1 downto 0);
-        o_Dout1  : out std_logic_vector(DATA_WIDTH - 1 downto 0);
-        o_Dout2  : out std_logic_vector(DATA_WIDTH - 1 downto 0)
+        read1  : out std_logic_vector(DATA_WIDTH - 1 downto 0);
+        read2  : out std_logic_vector(DATA_WIDTH - 1 downto 0)
     );
 end regfile;
 
@@ -68,7 +68,7 @@ begin
             WIDTH_OUT => NUM_REG)
         port map(
             i_we => iWE,
-            i_sel => wr_sele,
+            i_sel => wraddr,
             o_out => s_wr_reg);
 
     G_N_REG: for i in 0 to NUM_REG - 1 generate
@@ -94,9 +94,9 @@ begin
             SEL => RD_SEL
         )
         port map(
-            i_SEL => rd_sel1,
+            i_SEL => rs1,
             i_array => all_reg_out,
-            o_O => o_Dout1
+            o_O => read1
         );
     G_32bmux32t1_B: mux32t1_n
         generic map(
@@ -105,8 +105,8 @@ begin
             SEL => RD_SEL
         )
         port map(
-            i_SEL => rd_sel2,
+            i_SEL => rs2,
             i_array => all_reg_out,
-            o_O => o_Dout2
+            o_O => read2
         );
 end structural;
