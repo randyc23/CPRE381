@@ -1,0 +1,112 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e vcom 2026.2 2026.05, May 18 2026
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic
+T_opt
+!i145 1
+!i144 0
+!s110 1792041998
+V:5OD:m?=cQfNIoZ3Qe87b0
+04 21 5 work tb_control_unit_basic mixed 1
+=1-005056b62f45-6ad0640e-aa655-9bbd
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+!i152 0
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2026.2;84
+Econtrol_unit
+Z2 w1792040471
+Z3 DPx3 std 6 textio 0 22 <UlP6K1@RDQa_MJ[:UEnP2
+Z4 DPx4 ieee 14 std_logic_1164 0 22 TDbGXLH=YSoj9JRY2gkNY0
+!i122 0
+R1
+Z5 8/home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/Control.vhdl
+Z6 F/home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/Control.vhdl
+l0
+L19 1
+VNMMBI^D_@1oUIgS19M6XT2
+!s100 m9=LoBFhoY99_AX@H7J`z1
+Z7 OL;C;2026.2;84
+32
+Z8 !s110 1792041989
+!i10b 1
+Z9 !s108 1792041989.000000
+Z10 !s90 -reportprogress|300|-work|work|/home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/Control.vhdl|/home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/tb_control_unit_basic.vhd|
+Z11 !s107 /home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/tb_control_unit_basic.vhd|/home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/Control.vhdl|
+!i113 0
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R3
+R4
+DEx4 work 12 control_unit 0 22 NMMBI^D_@1oUIgS19M6XT2
+!i122 0
+l51
+L35 92
+V3okgcdMfi5gSoF4Z8DP7a2
+!s100 TNHn4N5m4SGM_aFdDY6OU1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Etb_control_unit_basic
+Z14 w1792040908
+R3
+R4
+!i122 0
+R1
+Z15 8/home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/tb_control_unit_basic.vhd
+Z16 F/home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/tb_control_unit_basic.vhd
+l0
+L11 1
+Vml_0BKDo3hGDWjjkbiOP23
+!s100 4MzS2S<=YX5:]Z]FQ?JO`2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Amixed
+R3
+R4
+DEx4 work 21 tb_control_unit_basic 0 22 ml_0BKDo3hGDWjjkbiOP23
+!i122 0
+l52
+L15 244
+VM6QHkDAdlP576X<:Dcodj0
+!s100 Jkh_5dLQF9iTiJ^oA66RR0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13

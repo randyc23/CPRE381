@@ -1,0 +1,33 @@
+[N
+4
+3
+5 mixed
+2
+21 tb_control_unit_basic
+1
+55 /home/randyc1/CPRE381/CPRE381_Proj_1/Control Logic/work
+4
+9 gCLK_HPER
+]
+[G
+1
+2
+3
+1
+4
+0
+0
+0
+0
+8 8
+-128
+-106
+-104
+0
+0
+0
+0
+0
+0
+0
+]
