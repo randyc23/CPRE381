@@ -7,7 +7,7 @@ use ieee.numeric_std.all;
 
 entity imem is
     generic(
-        ADDR_WIDTH : natural := 32;
+        ADDR_WIDTH : natural := 10;
         INSTR_WIDTH : natural := 32;
         BYTE_WIDTH : natural := 8
     );
@@ -17,6 +17,7 @@ entity imem is
         addr            : in std_logic_vector((ADDR_WIDTH-1) downto 0);
         data            : in std_logic_vector((INSTR_WIDTH-1) downto 0);
         be              : in std_logic_vector (3 downto 0);   -- 4 bytes per word
+        we        : in std_logic := '0';
         q        : out std_logic_vector((INSTR_WIDTH -1) downto 0)
     );
 end imem;
