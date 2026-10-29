@@ -1,0 +1,222 @@
+QuestaSim-64 vcom 2026.2 Compiler 2026.05 May 18 2026
+Start time: 15:11:47 on Oct 19,2026
+vcom -2008 -work internal/ModelSimContainer/work proj/src/RISCV_types.vhd internal/testpy/tb.vhd proj/src/RISCV_types.vhd proj/src/TopLevel/mem.vhd proj/src/TopLevel/RISCV_Processor.vhd proj/src/PC_Reg/dffg.vhd proj/src/PC_Reg/reg_n.vhd proj/src/Data Memory/load_ext.vhd proj/src/Data Memory/store_ext.vhd proj/src/Branch Logic/branch_logic.vhd proj/src/Register File/dffg.vhd proj/src/Register File/regfile.vhd proj/src/Register File/reg_n.vhd proj/src/Register File/dcdr5t32.vhd proj/src/Register File/mux32t1_n.vhd proj/src/Register File/mux32t1.vhd proj/src/Fetch Control/mux2t1_N.vhd proj/src/Fetch Control/PC_Adder_N.vhd proj/src/Fetch Control/andg2.vhd proj/src/Fetch Control/org2.vhd proj/src/Fetch Control/mux2t1.vhd proj/src/Fetch Control/Full_Adder.vhd proj/src/Fetch Control/Fetch_Control.vhd proj/src/Fetch Control/invg.vhd proj/src/Fetch Control/xorg2.vhd proj/src/Control Logic/Control.vhd proj/src/Immediate Generator/immgen.vhd proj/src/ALU/ALU.vhd proj/src/ALU/LogicCtrl/andg_n.vhd proj/src/ALU/LogicCtrl/mux2t1.vhd proj/src/ALU/LogicCtrl/xorg2.vhd proj/src/ALU/LogicCtrl/mux4t1_N.vhd proj/src/ALU/LogicCtrl/LgcCtrlr.vhd proj/src/ALU/LogicCtrl/org2.vhd proj/src/ALU/LogicCtrl/norg_n.vhd proj/src/ALU/LogicCtrl/invg_n.vhd proj/src/ALU/LogicCtrl/org_n.vhd proj/src/ALU/LogicCtrl/invg.vhd proj/src/ALU/LogicCtrl/xorg_n.vhd proj/src/ALU/LogicCtrl/andg2.vhd proj/src/ALU/LogicCtrl/mux4t1.vhd proj/src/ALU/Mux4t1_N/mux4t1.vhd proj/src/ALU/Mux4t1_N/mux2t1_N.vhd proj/src/ALU/Mux4t1_N/mux4t1_N.vhd proj/src/ALU/Mux4t1_N/mux2t1.vhd proj/src/ALU/BiShifter/reverse_mux.vhd proj/src/ALU/BiShifter/fill_logic.vhd proj/src/ALU/BiShifter/shift16.vhd proj/src/ALU/BiShifter/shift8.vhd proj/src/ALU/BiShifter/shift1.vhd proj/src/ALU/BiShifter/mux2t1_N.vhd proj/src/ALU/BiShifter/shift4.vhd proj/src/ALU/BiShifter/bidir_shift.vhd proj/src/ALU/BiShifter/shift2.vhd proj/src/ALU/BiShifter/mux2t1.vhd proj/src/ALU/AddSub/mux2t1.vhd proj/src/ALU/AddSub/Full_Adder_N.vhd proj/src/ALU/AddSub/xorg2.vhd proj/src/ALU/AddSub/invg.vhd proj/src/ALU/AddSub/Full_Adder.vhd proj/src/ALU/AddSub/andg2.vhd proj/src/ALU/AddSub/org2.vhd proj/src/ALU/AddSub/add_sub_N.vhd proj/src/ALU Control/org2.vhd proj/src/ALU Control/andg3.vhd proj/src/ALU Control/andg4.vhd proj/src/ALU Control/org3.vhd proj/src/ALU Control/org4.vhd proj/src/ALU Control/ALUCtrlr.vhd proj/src/ALU Control/andg5.vhd proj/src/ALU Control/andg2.vhd proj/src/ALU Control/invg.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package RISCV_types
+-- Compiling package body RISCV_types
+-- Loading package RISCV_types
+-- Loading package std_logic_textio
+-- Loading package ENV
+-- Compiling entity tb
+-- Compiling architecture mixed of tb
+** Warning: proj/src/RISCV_types.vhd(15): (vcom-1615) Existing package 'RISCV_types' at line 18 will be overwritten.
+-- Compiling package RISCV_types
+** Warning: proj/src/RISCV_types.vhd(31): (vcom-1615) Existing package body 'RISCV_types(body)' at line 31 will be overwritten.
+-- Compiling package body RISCV_types
+-- Loading package RISCV_types
+-- Loading package NUMERIC_STD
+-- Compiling entity mem
+-- Compiling architecture rtl of mem
+-- Loading package RISCV_types
+-- Compiling entity RISCV_Processor
+-- Compiling architecture structure of RISCV_Processor
+** Warning: proj/src/PC_Reg/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/Register File/dffg.vhd(23) will be overwritten.
+-- Compiling entity dffg
+** Warning: proj/src/PC_Reg/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/Register File/dffg.vhd(33) will be overwritten.
+-- Compiling architecture mixed of dffg
+-- Compiling entity pc_reg
+-- Compiling architecture behavioral of pc_reg
+-- Compiling entity load_ext
+-- Compiling architecture dataflow of load_ext
+-- Compiling entity store_ext
+-- Compiling architecture dataflow of store_ext
+-- Compiling entity branch_logic
+-- Compiling architecture dataflow of branch_logic
+** Warning: proj/src/Register File/dffg.vhd(23): (vcom-1615) Existing entity 'dffg' at proj/src/PC_Reg/dffg.vhd(23) will be overwritten.
+-- Compiling entity dffg
+** Warning: proj/src/Register File/dffg.vhd(33): (vcom-1615) Existing architecture 'dffg(mixed)' at proj/src/PC_Reg/dffg.vhd(33) will be overwritten.
+-- Compiling architecture mixed of dffg
+-- Compiling entity regfile
+-- Compiling architecture structural of regfile
+-- Compiling entity reg_n
+-- Compiling architecture mixed of reg_n
+-- Compiling entity dcdr5t32
+-- Compiling architecture dataflow of dcdr5t32
+-- Compiling entity mux32t1_n
+-- Compiling architecture dataflow of mux32t1_N
+-- Compiling entity mux32t1
+-- Compiling architecture dataflow of mux32t1
+** Warning: proj/src/Fetch Control/mux2t1_N.vhd(21): (vcom-1615) Existing entity 'mux2t1_N' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/BiShifter/mux2t1_N.vhd(21) will be overwritten.
+-- Compiling entity mux2t1_N
+** Warning: proj/src/Fetch Control/mux2t1_N.vhd(30): (vcom-1615) Existing architecture 'mux2t1_N(structural)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/BiShifter/mux2t1_N.vhd(30) will be overwritten.
+-- Compiling architecture structural of mux2t1_N
+-- Compiling entity PC_Adder_N
+-- Compiling architecture mixed of PC_Adder_N
+** Warning: proj/src/Fetch Control/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU Control/andg2.vhd(23) will be overwritten.
+-- Compiling entity andg2
+** Warning: proj/src/Fetch Control/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU Control/andg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of andg2
+** Warning: proj/src/Fetch Control/org2.vhd(23): (vcom-1615) Existing entity 'org2' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU Control/org2.vhd(23) will be overwritten.
+-- Compiling entity org2
+** Warning: proj/src/Fetch Control/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU Control/org2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of org2
+** Warning: proj/src/Fetch Control/mux2t1.vhd(19): (vcom-1615) Existing entity 'mux2t1' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/AddSub/mux2t1.vhd(19) will be overwritten.
+-- Compiling entity mux2t1
+** Warning: proj/src/Fetch Control/mux2t1.vhd(27): (vcom-1615) Existing architecture 'mux2t1(structure)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/AddSub/mux2t1.vhd(27) will be overwritten.
+-- Compiling architecture structure of mux2t1
+** Warning: proj/src/Fetch Control/Full_Adder.vhd(26): (vcom-1615) Existing entity 'Full_Adder' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/AddSub/Full_Adder.vhd(26) will be overwritten.
+-- Compiling entity Full_Adder
+** Warning: proj/src/Fetch Control/Full_Adder.vhd(36): (vcom-1615) Existing architecture 'Full_Adder(structure)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/AddSub/Full_Adder.vhd(36) will be overwritten.
+-- Compiling architecture structure of Full_Adder
+-- Compiling entity Fetch_Control
+-- Compiling architecture structural of Fetch_Control
+** Warning: proj/src/Fetch Control/invg.vhd(23): (vcom-1615) Existing entity 'invg' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU Control/invg.vhd(23) will be overwritten.
+-- Compiling entity invg
+** Warning: proj/src/Fetch Control/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU Control/invg.vhd(30) will be overwritten.
+-- Compiling architecture dataflow of invg
+** Warning: proj/src/Fetch Control/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/AddSub/xorg2.vhd(23) will be overwritten.
+-- Compiling entity xorg2
+** Warning: proj/src/Fetch Control/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/AddSub/xorg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of xorg2
+-- Compiling entity control_unit
+-- Compiling architecture behavioral of control_unit
+-- Compiling entity immgen
+-- Compiling architecture dataflow of immgen
+-- Compiling entity alu
+-- Compiling architecture structural of alu
+-- Compiling entity andg_n
+-- Compiling architecture structural of andg_n
+** Warning: proj/src/ALU/LogicCtrl/mux2t1.vhd(19): (vcom-1615) Existing entity 'mux2t1' at proj/src/Fetch Control/mux2t1.vhd(19) will be overwritten.
+-- Compiling entity mux2t1
+** Warning: proj/src/ALU/LogicCtrl/mux2t1.vhd(27): (vcom-1615) Existing architecture 'mux2t1(structure)' at proj/src/Fetch Control/mux2t1.vhd(27) will be overwritten.
+-- Compiling architecture structure of mux2t1
+** Warning: proj/src/ALU/LogicCtrl/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at proj/src/Fetch Control/xorg2.vhd(23) will be overwritten.
+-- Compiling entity xorg2
+** Warning: proj/src/ALU/LogicCtrl/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at proj/src/Fetch Control/xorg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of xorg2
+** Warning: proj/src/ALU/LogicCtrl/mux4t1_N.vhd(21): (vcom-1615) Existing entity 'mux4t1_N' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/Mux4t1_N/mux4t1_N.vhd(21) will be overwritten.
+-- Compiling entity mux4t1_N
+** Warning: proj/src/ALU/LogicCtrl/mux4t1_N.vhd(32): (vcom-1615) Existing architecture 'mux4t1_N(structural)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/Mux4t1_N/mux4t1_N.vhd(32) will be overwritten.
+-- Compiling architecture structural of mux4t1_N
+-- Compiling entity LgcCtrlr
+-- Compiling architecture structural of LgcCtrlr
+** Warning: proj/src/ALU/LogicCtrl/org2.vhd(23): (vcom-1615) Existing entity 'org2' at proj/src/Fetch Control/org2.vhd(23) will be overwritten.
+-- Compiling entity org2
+** Warning: proj/src/ALU/LogicCtrl/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at proj/src/Fetch Control/org2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of org2
+-- Compiling entity norg_n
+-- Compiling architecture structural of norg_n
+-- Compiling entity invg_n
+-- Compiling architecture structural of invg_n
+-- Compiling entity org_n
+-- Compiling architecture structural of org_n
+** Warning: proj/src/ALU/LogicCtrl/invg.vhd(23): (vcom-1615) Existing entity 'invg' at proj/src/Fetch Control/invg.vhd(23) will be overwritten.
+-- Compiling entity invg
+** Warning: proj/src/ALU/LogicCtrl/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at proj/src/Fetch Control/invg.vhd(30) will be overwritten.
+-- Compiling architecture dataflow of invg
+-- Compiling entity xorg_n
+-- Compiling architecture structural of xorg_n
+** Warning: proj/src/ALU/LogicCtrl/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at proj/src/Fetch Control/andg2.vhd(23) will be overwritten.
+-- Compiling entity andg2
+** Warning: proj/src/ALU/LogicCtrl/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at proj/src/Fetch Control/andg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of andg2
+** Warning: proj/src/ALU/LogicCtrl/mux4t1.vhd(19): (vcom-1615) Existing entity 'mux4t1' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/Mux4t1_N/mux4t1.vhd(19) will be overwritten.
+-- Compiling entity mux4t1
+** Warning: proj/src/ALU/LogicCtrl/mux4t1.vhd(29): (vcom-1615) Existing architecture 'mux4t1(structure)' at /home/adrowski/School/Fall 2026/CprE3810/Project/CPRE381/proj/src/ALU/Mux4t1_N/mux4t1.vhd(29) will be overwritten.
+-- Compiling architecture structure of mux4t1
+** Warning: proj/src/ALU/Mux4t1_N/mux4t1.vhd(19): (vcom-1615) Existing entity 'mux4t1' at proj/src/ALU/LogicCtrl/mux4t1.vhd(19) will be overwritten.
+-- Compiling entity mux4t1
+** Warning: proj/src/ALU/Mux4t1_N/mux4t1.vhd(29): (vcom-1615) Existing architecture 'mux4t1(structure)' at proj/src/ALU/LogicCtrl/mux4t1.vhd(29) will be overwritten.
+-- Compiling architecture structure of mux4t1
+** Warning: proj/src/ALU/Mux4t1_N/mux2t1_N.vhd(21): (vcom-1615) Existing entity 'mux2t1_N' at proj/src/Fetch Control/mux2t1_N.vhd(21) will be overwritten.
+-- Compiling entity mux2t1_N
+** Warning: proj/src/ALU/Mux4t1_N/mux2t1_N.vhd(30): (vcom-1615) Existing architecture 'mux2t1_N(structural)' at proj/src/Fetch Control/mux2t1_N.vhd(30) will be overwritten.
+-- Compiling architecture structural of mux2t1_N
+** Warning: proj/src/ALU/Mux4t1_N/mux4t1_N.vhd(21): (vcom-1615) Existing entity 'mux4t1_N' at proj/src/ALU/LogicCtrl/mux4t1_N.vhd(21) will be overwritten.
+-- Compiling entity mux4t1_N
+** Warning: proj/src/ALU/Mux4t1_N/mux4t1_N.vhd(32): (vcom-1615) Existing architecture 'mux4t1_N(structural)' at proj/src/ALU/LogicCtrl/mux4t1_N.vhd(32) will be overwritten.
+-- Compiling architecture structural of mux4t1_N
+** Warning: proj/src/ALU/Mux4t1_N/mux2t1.vhd(19): (vcom-1615) Existing entity 'mux2t1' at proj/src/ALU/LogicCtrl/mux2t1.vhd(19) will be overwritten.
+-- Compiling entity mux2t1
+** Warning: proj/src/ALU/Mux4t1_N/mux2t1.vhd(27): (vcom-1615) Existing architecture 'mux2t1(structure)' at proj/src/ALU/LogicCtrl/mux2t1.vhd(27) will be overwritten.
+-- Compiling architecture structure of mux2t1
+-- Compiling entity rev_mux
+-- Compiling architecture structural of rev_mux
+-- Compiling entity fill_logic
+-- Compiling architecture dataflow of fill_logic
+-- Compiling entity shift16
+-- Compiling architecture structural of shift16
+-- Compiling entity shift8
+-- Compiling architecture structural of shift8
+-- Compiling entity shift1
+-- Compiling architecture structural of shift1
+** Warning: proj/src/ALU/BiShifter/mux2t1_N.vhd(21): (vcom-1615) Existing entity 'mux2t1_N' at proj/src/ALU/Mux4t1_N/mux2t1_N.vhd(21) will be overwritten.
+-- Compiling entity mux2t1_N
+** Warning: proj/src/ALU/BiShifter/mux2t1_N.vhd(30): (vcom-1615) Existing architecture 'mux2t1_N(structural)' at proj/src/ALU/Mux4t1_N/mux2t1_N.vhd(30) will be overwritten.
+-- Compiling architecture structural of mux2t1_N
+-- Compiling entity shift4
+-- Compiling architecture structural of shift4
+-- Compiling entity bidir_shift
+-- Compiling architecture structural of bidir_shift
+-- Compiling entity shift2
+-- Compiling architecture structural of shift2
+** Warning: proj/src/ALU/BiShifter/mux2t1.vhd(19): (vcom-1615) Existing entity 'mux2t1' at proj/src/ALU/Mux4t1_N/mux2t1.vhd(19) will be overwritten.
+-- Compiling entity mux2t1
+** Warning: proj/src/ALU/BiShifter/mux2t1.vhd(27): (vcom-1615) Existing architecture 'mux2t1(structure)' at proj/src/ALU/Mux4t1_N/mux2t1.vhd(27) will be overwritten.
+-- Compiling architecture structure of mux2t1
+** Warning: proj/src/ALU/AddSub/mux2t1.vhd(19): (vcom-1615) Existing entity 'mux2t1' at proj/src/ALU/BiShifter/mux2t1.vhd(19) will be overwritten.
+-- Compiling entity mux2t1
+** Warning: proj/src/ALU/AddSub/mux2t1.vhd(27): (vcom-1615) Existing architecture 'mux2t1(structure)' at proj/src/ALU/BiShifter/mux2t1.vhd(27) will be overwritten.
+-- Compiling architecture structure of mux2t1
+-- Compiling entity Full_Adder_N
+-- Compiling architecture mixed of Full_Adder_N
+** Warning: proj/src/ALU/AddSub/xorg2.vhd(23): (vcom-1615) Existing entity 'xorg2' at proj/src/ALU/LogicCtrl/xorg2.vhd(23) will be overwritten.
+-- Compiling entity xorg2
+** Warning: proj/src/ALU/AddSub/xorg2.vhd(31): (vcom-1615) Existing architecture 'xorg2(dataflow)' at proj/src/ALU/LogicCtrl/xorg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of xorg2
+** Warning: proj/src/ALU/AddSub/invg.vhd(23): (vcom-1615) Existing entity 'invg' at proj/src/ALU/LogicCtrl/invg.vhd(23) will be overwritten.
+-- Compiling entity invg
+** Warning: proj/src/ALU/AddSub/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at proj/src/ALU/LogicCtrl/invg.vhd(30) will be overwritten.
+-- Compiling architecture dataflow of invg
+** Warning: proj/src/ALU/AddSub/Full_Adder.vhd(26): (vcom-1615) Existing entity 'Full_Adder' at proj/src/Fetch Control/Full_Adder.vhd(26) will be overwritten.
+-- Compiling entity Full_Adder
+** Warning: proj/src/ALU/AddSub/Full_Adder.vhd(36): (vcom-1615) Existing architecture 'Full_Adder(structure)' at proj/src/Fetch Control/Full_Adder.vhd(36) will be overwritten.
+-- Compiling architecture structure of Full_Adder
+** Warning: proj/src/ALU/AddSub/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at proj/src/ALU/LogicCtrl/andg2.vhd(23) will be overwritten.
+-- Compiling entity andg2
+** Warning: proj/src/ALU/AddSub/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at proj/src/ALU/LogicCtrl/andg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of andg2
+** Warning: proj/src/ALU/AddSub/org2.vhd(23): (vcom-1615) Existing entity 'org2' at proj/src/ALU/LogicCtrl/org2.vhd(23) will be overwritten.
+-- Compiling entity org2
+** Warning: proj/src/ALU/AddSub/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at proj/src/ALU/LogicCtrl/org2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of org2
+-- Compiling entity add_sub_N
+-- Compiling architecture mixed of add_sub_N
+** Warning: proj/src/ALU Control/org2.vhd(23): (vcom-1615) Existing entity 'org2' at proj/src/ALU/AddSub/org2.vhd(23) will be overwritten.
+-- Compiling entity org2
+** Warning: proj/src/ALU Control/org2.vhd(31): (vcom-1615) Existing architecture 'org2(dataflow)' at proj/src/ALU/AddSub/org2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of org2
+-- Compiling entity andg3
+-- Compiling architecture dataflow of andg3
+-- Compiling entity andg4
+-- Compiling architecture dataflow of andg4
+-- Compiling entity org3
+-- Compiling architecture dataflow of org3
+-- Compiling entity org4
+-- Compiling architecture dataflow of org4
+-- Compiling entity aluctrlr
+-- Compiling architecture structural of aluctrlr
+-- Compiling entity andg5
+-- Compiling architecture dataflow of andg5
+** Warning: proj/src/ALU Control/andg2.vhd(23): (vcom-1615) Existing entity 'andg2' at proj/src/ALU/AddSub/andg2.vhd(23) will be overwritten.
+-- Compiling entity andg2
+** Warning: proj/src/ALU Control/andg2.vhd(31): (vcom-1615) Existing architecture 'andg2(dataflow)' at proj/src/ALU/AddSub/andg2.vhd(31) will be overwritten.
+-- Compiling architecture dataflow of andg2
+** Warning: proj/src/ALU Control/invg.vhd(23): (vcom-1615) Existing entity 'invg' at proj/src/ALU/AddSub/invg.vhd(23) will be overwritten.
+-- Compiling entity invg
+** Warning: proj/src/ALU Control/invg.vhd(30): (vcom-1615) Existing architecture 'invg(dataflow)' at proj/src/ALU/AddSub/invg.vhd(30) will be overwritten.
+-- Compiling architecture dataflow of invg
+vcom: End time: 15:11:47 on Oct 19,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 64

@@ -32,9 +32,9 @@ entity control_unit is
          Halt       : out std_logic);
 end control_unit;
 
-architecture behavioral of control_unit is
+architecture dataflow of control_unit is
 
-    -- RV32I opcodes (inst(6 downto 0))
+    -- RV32I opcodes
     constant OP_RTYPE  : std_logic_vector(6 downto 0) := "0110011"; -- add, sub, and, or, xor, sll, srl, sra, slt
     constant OP_IALU   : std_logic_vector(6 downto 0) := "0010011"; -- addi, andi, ori, xori, slti, sltiu, slli, srli, srai
     constant OP_LOAD   : std_logic_vector(6 downto 0) := "0000011"; -- lb, lh, lw, lbu, lhu
@@ -48,79 +48,39 @@ architecture behavioral of control_unit is
 
     signal s_opcode : std_logic_vector(6 downto 0);
 
+    signal s_rtype, s_ialu, s_load, s_store, s_branch : std_logic;
+    signal s_jal, s_jalr, s_lui, s_auipc, s_system   : std_logic;
+
 begin
 
     s_opcode <= inst(6 downto 0);
 
-    P_DECODE: process(s_opcode)
-    begin
-        
-        ALUOp    <= "00";
-        ALUSrcA  <= "00";
-        ALUSrc   <= '0';
-        RegWrite <= '0';
-        MemRead  <= '0';
-        MemWrite <= '0';
-        MemtoReg <= '0';
-        AndLink  <= '0';
-        Branch   <= '0';
-        Jump     <= '0';
-        JumpReg  <= '0';
-        Halt     <= '0';
+    s_rtype  <= '1' when s_opcode = OP_RTYPE  else '0';   -- rd = rs1 op rs2
+    s_ialu   <= '1' when s_opcode = OP_IALU   else '0';   -- rd = rs1 op imm
+    s_load   <= '1' when s_opcode = OP_LOAD   else '0';   -- rd = Mem[rs1 + imm]
+    s_store  <= '1' when s_opcode = OP_STORE  else '0';   -- Mem[rs1 + imm] = rs2
+    s_branch <= '1' when s_opcode = OP_BRANCH else '0';   -- if (rs1 ? rs2) PC = PC + imm
+    s_jal    <= '1' when s_opcode = OP_JAL    else '0';   -- rd = PC + 4, PC = PC + imm
+    s_jalr   <= '1' when s_opcode = OP_JALR   else '0';   -- rd = PC + 4, PC = (rs1 + imm) & ~1
+    s_lui    <= '1' when s_opcode = OP_LUI    else '0';   -- rd = 0 + imm
+    s_auipc  <= '1' when s_opcode = OP_AUIPC  else '0';   -- rd = PC + imm
+    s_system <= '1' when s_opcode = OP_SYSTEM else '0';   -- wfi -> stop
 
-        case s_opcode is
+    ALUOp(1)   <= s_rtype or s_ialu;
+    ALUOp(0)   <= s_ialu  or s_branch;
 
-            when OP_RTYPE =>            -- rd = rs1 op rs2
-                ALUOp    <= "10";
-                RegWrite <= '1';
+    ALUSrcA(1) <= s_lui;
+    ALUSrcA(0) <= s_auipc;
 
-            when OP_IALU =>             -- rd = rs1 op imm
-                ALUOp    <= "11";
-                ALUSrc   <= '1';
-                RegWrite <= '1';
+    ALUSrc     <= s_ialu or s_load or s_store or s_jalr or s_lui or s_auipc;
+    RegWrite   <= s_rtype or s_ialu or s_load or s_jal or s_jalr or s_lui or s_auipc;
+    MemRead    <= s_load;
+    MemWrite   <= s_store;
+    MemtoReg   <= s_load;
+    AndLink    <= s_jal or s_jalr;
+    Branch     <= s_branch;
+    Jump       <= s_jal;
+    JumpReg    <= s_jalr;
+    Halt       <= s_system;
 
-            when OP_LOAD =>             -- rd = Mem[rs1 + imm]
-                ALUSrc   <= '1';
-                RegWrite <= '1';
-                MemRead  <= '1';
-                MemtoReg <= '1';
-
-            when OP_STORE =>            -- Mem[rs1 + imm] = rs2
-                ALUSrc   <= '1';
-                MemWrite <= '1';
-
-            when OP_BRANCH =>           -- if (rs1 ? rs2) PC = PC + imm
-                ALUOp    <= "01";
-                Branch   <= '1';
-
-            when OP_JAL =>              -- rd = PC + 4, PC = PC + imm
-                RegWrite <= '1';
-                AndLink  <= '1';
-                Jump     <= '1';
-
-            when OP_JALR =>             -- rd = PC + 4, PC = (rs1 + imm) & ~1
-                ALUSrc   <= '1';
-                RegWrite <= '1';
-                AndLink  <= '1';
-                JumpReg  <= '1';
-
-            when OP_LUI =>              -- rd = 0 + imm
-                ALUSrcA  <= "10";
-                ALUSrc   <= '1';
-                RegWrite <= '1';
-
-            when OP_AUIPC =>            -- rd = PC + imm
-                ALUSrcA  <= "01";
-                ALUSrc   <= '1';
-                RegWrite <= '1';
-
-            when OP_SYSTEM =>           -- wfi -> stop
-                Halt     <= '1';
-
-            when others =>              -- unknown opcode: keep the safe defaults
-                null;
-
-        end case;
-    end process P_DECODE;
-
-end behavioral;
+end dataflow;
