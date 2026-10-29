@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use work.mux_arr.all;
+use work.RISCV_types.all;
 
 
 entity regfile is
@@ -32,6 +32,16 @@ architecture structural of regfile is
             i_WE   : in std_logic;
             i_Din  : in std_logic_vector(WIDTH-1 downto 0);
             o_Dout : out std_logic_vector(WIDTH-1 downto 0));
+    end component;
+
+    component pc_reg is
+        generic(WIDTH   : integer;
+                RST_VAL : std_logic_vector);
+        port(i_CLK  : in std_logic;
+             i_RST  : in std_logic;
+             i_WE   : in std_logic;
+             i_Din  : in std_logic_vector(WIDTH-1 downto 0);
+             o_Dout : out std_logic_vector(WIDTH-1 downto 0));
     end component;
 
     component dcdr5t32 is
@@ -72,7 +82,7 @@ begin
             o_out => s_wr_reg);
 
     G_N_REG: for i in 0 to NUM_REG - 1 generate
-        GEN_NORMAL_REG: if i /= 0 generate
+        GEN_NORMAL_REG: if i /= 0 and i /= 2 and i /= 3 generate
             REG_Ni: reg_n
                 port map(
                     i_CLK => iCLK,
@@ -82,6 +92,34 @@ begin
                     o_Dout => all_reg_out(i)
                 );
         end generate GEN_NORMAL_REG;
+
+        GEN_SP_REG: if i = 2 generate
+            REG_SP: pc_reg
+                generic map(
+                    WIDTH => DATA_WIDTH,
+                    RST_VAL => x"7FFFEFFC")
+                port map(
+                    i_CLK => iCLK,
+                    i_RST => iRST,
+                    i_WE => s_wr_reg(i),
+                    i_Din => i_Din,
+                    o_Dout => all_reg_out(i)
+                );
+        end generate GEN_SP_REG;
+
+        GEN_GP_REG: if i = 3 generate
+            REG_GP: pc_reg
+                generic map(
+                    WIDTH => DATA_WIDTH,
+                    RST_VAL => x"10008000")
+                port map(
+                    i_CLK => iCLK,
+                    i_RST => iRST,
+                    i_WE => s_wr_reg(i),
+                    i_Din => i_Din,
+                    o_Dout => all_reg_out(i)
+                );
+        end generate GEN_GP_REG;
 
         GEN_X0_REG: if i = 0 generate
             all_reg_out(0) <= (others => '0');

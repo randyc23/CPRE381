@@ -16,7 +16,7 @@ end Fetch_Control;
 
 architecture structural of Fetch_Control is
 
-  component Full_Adder_N is
+  component PC_Adder_N is
     generic(N : integer);
     port(i_Cin       : in std_logic;
          i_A         : in std_logic_vector(N-1 downto 0);
@@ -46,8 +46,8 @@ architecture structural of Fetch_Control is
   signal or1out : std_logic;
 
 begin
-    adder1: Full_Adder_N generic map(N => N) port map(i_Cin => '0', i_A => current_PC, i_B => four, o_S => add1out, o_Cout => open);
-    adder2: Full_Adder_N generic map(N => N) port map(i_Cin => '0', i_A => current_PC, i_B => immediate, o_S => add2out, o_Cout => open);
+    adder1: PC_Adder_N generic map(N => N) port map(i_Cin => '0', i_A => current_PC, i_B => four, o_S => add1out, o_Cout => open);
+    adder2: PC_Adder_N generic map(N => N) port map(i_Cin => '0', i_A => current_PC, i_B => immediate, o_S => add2out, o_Cout => open);
     org1: org2 port map(i_A => PCSrc, i_B => Jump, o_F => or1out);
     mux1: mux2t1_N generic map(N => N) port map(i_S => or1out, i_D0 => add1out, i_D1 => add2out, o_O => mux1out);
     jalr_target <= ALU_Result(N-1 downto 1) & '0';

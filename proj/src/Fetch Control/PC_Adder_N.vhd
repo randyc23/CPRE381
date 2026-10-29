@@ -1,16 +1,16 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity Full_Adder_N is
+entity PC_Adder_N is
   generic(N : integer);
   port(i_Cin       : in std_logic;
        i_A         : in std_logic_vector(N-1 downto 0);
        i_B         : in std_logic_vector(N-1 downto 0);
        o_S         : out std_logic_vector(N-1 downto 0);
        o_Cout      : out std_logic);
-end Full_Adder_N;
+end PC_Adder_N;
 
-architecture mixed of Full_Adder_N is
+architecture mixed of PC_Adder_N is
 
   component Full_Adder is 
     port(Cin            : in std_logic;

@@ -36,5 +36,4 @@ begin
                   x"000000" & s_byte  when "100",
                   x"0000" & s_half    when "101",
                   i_data              when others;
-
 end dataflow;

@@ -1,31 +1,35 @@
 -- Quartus Prime VHDL Template
--- Single-port RISC-V Instruction Memory with read address
+-- Single-port RAM with single read/write address
 
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity imem is
-    generic(
+entity mem is
+
+    generic 
+    (
+        DATA_WIDTH : natural := 32;
         ADDR_WIDTH : natural := 10;
-        INSTR_WIDTH : natural := 32;
         BYTE_WIDTH : natural := 8
     );
 
-    port(
+    port 
+    (
         clk        : in std_logic;
         addr            : in std_logic_vector((ADDR_WIDTH-1) downto 0);
-        data            : in std_logic_vector((INSTR_WIDTH-1) downto 0);
+        data            : in std_logic_vector((DATA_WIDTH-1) downto 0);
         be              : in std_logic_vector (3 downto 0);   -- 4 bytes per word
-        we        : in std_logic := '0';
-        q        : out std_logic_vector((INSTR_WIDTH -1) downto 0)
+        we        : in std_logic := '1';
+        q        : out std_logic_vector((DATA_WIDTH -1) downto 0)
     );
-end imem;
 
-architecture rtl of imem is
+end mem;
+
+architecture rtl of mem is
 
     -- Build a 2-D array type for the RAM
-    subtype word_t is std_logic_vector((INSTR_WIDTH-1) downto 0);
+    subtype word_t is std_logic_vector((DATA_WIDTH-1) downto 0);
     type memory_t is array(2**ADDR_WIDTH-1 downto 0) of word_t;
 
     -- Declare the RAM signal and specify a default value.    Quartus Prime
@@ -61,6 +65,4 @@ begin
     q_local <= ram(to_integer(unsigned(addr)));
 
 end rtl;
-
--- 
 

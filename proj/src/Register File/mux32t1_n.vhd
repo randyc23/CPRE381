@@ -17,7 +17,7 @@
 
 library IEEE;
 use IEEE.std_logic_1164.all;
-use work.mux_arr.all;
+use work.RISCV_types.all;
 
 entity mux32t1_n is
   generic(N : integer;
