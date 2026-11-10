@@ -1,0 +1,408 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2160 1285" width="2160" height="1285" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a7fc1"/></marker>
+<marker id="af" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c2188b"/></marker>
+<style>
+.b{fill:#f6f8fa;stroke:#222;stroke-width:1.5}
+.new{fill:#fff4d6;stroke:#b7791f;stroke-width:2}
+.w{fill:none;stroke:#222;stroke-width:1.5}
+.c{fill:none;stroke:#1a7fc1;stroke-width:1.5}
+.f{fill:none;stroke:#c2188b;stroke-width:2}
+.bus{fill:none;stroke:#222;stroke-width:3.5}
+.grp{fill:none;stroke:#777;stroke-width:1.2;stroke-dasharray:6 4}
+.reg{fill:#e7c9c9;stroke:#a33;stroke-width:1.5}
+text{paint-order:stroke;stroke:#fff;stroke-width:2.5px;stroke-linejoin:round}
+.t{font-size:10px;fill:#222}
+.tc{font-size:10px;fill:#1a7fc1}
+.tf{font-size:10.5px;fill:#c2188b;font-weight:600}
+.n{font-size:13px;font-weight:700;fill:#111}
+.e{font-size:11px;font-style:italic;fill:#555}
+.p{font-size:9px;fill:#666}
+.m{font-size:9px;fill:#111}
+.mb{font-size:9px;font-weight:700;fill:#111}
+.mi{font-size:9px;font-style:italic;fill:#555}
+.h{font-size:15px;font-weight:700;fill:#111;stroke:none}
+.rn{font-size:14px;font-weight:700;fill:#611;stroke:none}
+.nt{font-size:12.5px;fill:#222;stroke:none}
+.nh{font-size:14px;font-weight:700;fill:#111;stroke:none}
+</style></defs>
+<rect width="2160" height="1285" fill="#fff"/>
+<rect x="10" y="8" width="440" height="1085" fill="#eaf2fb"/>
+<text class="h" x="230.0" y="30" text-anchor="middle">IF: Instruction Fetch</text>
+<rect x="476" y="8" width="414" height="1085" fill="#ecf7ee"/>
+<text class="h" x="683.0" y="30" text-anchor="middle">ID: Decode / Register Read</text>
+<rect x="926" y="8" width="484" height="1085" fill="#fdf5e6"/>
+<text class="h" x="1168.0" y="30" text-anchor="middle">EX: Execute</text>
+<rect x="1446" y="8" width="374" height="1085" fill="#f3edfa"/>
+<text class="h" x="1633.0" y="30" text-anchor="middle">MEM: Data Memory</text>
+<rect x="1856" y="8" width="294" height="1085" fill="#eef6f6"/>
+<text class="h" x="2003.0" y="30" text-anchor="middle">WB: Write Back</text>
+<text class="tc" x="760" y="127" text-anchor="start">s_Halt_ID</text>
+<text class="tc" x="932" y="127" text-anchor="start">s_Halt_EX</text>
+<text class="tc" x="1512" y="127" text-anchor="start">s_Halt_MEM</text>
+<text class="tc" x="1862" y="127" text-anchor="start">s_Halt</text>
+<path class="c" d="M700,130 L890,130"/>
+<text class="tc" x="760" y="147" text-anchor="start">s_RegWr_ID</text>
+<text class="tc" x="932" y="147" text-anchor="start">s_RegWr_EX</text>
+<text class="tc" x="1512" y="147" text-anchor="start">s_RegWr_MEM</text>
+<text class="tc" x="1862" y="147" text-anchor="start">s_RegWr</text>
+<path class="c" d="M700,150 L890,150"/>
+<text class="tc" x="760" y="167" text-anchor="start">s_andlink</text>
+<text class="tc" x="932" y="167" text-anchor="start">s_andlink_EX</text>
+<text class="tc" x="1512" y="167" text-anchor="start">s_andlink_MEM</text>
+<text class="tc" x="1862" y="167" text-anchor="start">s_andlink_WB</text>
+<path class="c" d="M700,170 L890,170"/>
+<text class="tc" x="760" y="187" text-anchor="start">s_memtoreg</text>
+<text class="tc" x="932" y="187" text-anchor="start">s_memtoreg_EX</text>
+<text class="tc" x="1512" y="187" text-anchor="start">s_memtoreg_MEM</text>
+<text class="tc" x="1862" y="187" text-anchor="start">s_memtoreg_WB</text>
+<path class="c" d="M700,190 L890,190"/>
+<text class="tc" x="760" y="207" text-anchor="start">s_memread</text>
+<text class="tc" x="932" y="207" text-anchor="start">s_memread_EX</text>
+<text class="tc" x="1512" y="207" text-anchor="start">s_memread_MEM (n/c)</text>
+<path class="c" d="M700,210 L890,210"/>
+<text class="tc" x="760" y="227" text-anchor="start">s_DMemWr_ID</text>
+<text class="tc" x="932" y="227" text-anchor="start">s_DMemWr_EX</text>
+<text class="tc" x="1512" y="227" text-anchor="start">s_DMemWr</text>
+<path class="c" d="M700,230 L890,230"/>
+<text class="tc" x="760" y="247" text-anchor="start">s_jumpreg</text>
+<text class="tc" x="932" y="247" text-anchor="start">s_jumpreg_EX</text>
+<path class="c" d="M700,250 L890,250"/>
+<text class="tc" x="760" y="267" text-anchor="start">s_jump</text>
+<text class="tc" x="932" y="267" text-anchor="start">s_jump_EX</text>
+<path class="c" d="M700,270 L890,270"/>
+<text class="tc" x="760" y="287" text-anchor="start">s_branch</text>
+<text class="tc" x="932" y="287" text-anchor="start">s_branch_EX</text>
+<path class="c" d="M700,290 L890,290"/>
+<text class="tc" x="760" y="307" text-anchor="start">s_alusrc</text>
+<text class="tc" x="932" y="307" text-anchor="start">s_alusrc_EX</text>
+<path class="c" d="M700,310 L890,310"/>
+<text class="tc" x="760" y="327" text-anchor="start">s_alusrca</text>
+<text class="tc" x="932" y="327" text-anchor="start">s_alusrca_EX</text>
+<path class="c" d="M700,330 L890,330"/>
+<text class="tc" x="760" y="347" text-anchor="start">s_aluop</text>
+<text class="tc" x="932" y="347" text-anchor="start">s_aluop_EX</text>
+<path class="c" d="M700,350 L890,350"/>
+<path class="c" d="M926,130 L1820,130"/>
+<path class="c" d="M926,150 L1820,150"/>
+<path class="c" d="M926,170 L1820,170"/>
+<path class="c" d="M926,190 L1820,190"/>
+<path class="c" d="M926,210 L1640,210"/>
+<path class="c" d="M926,230 L1630,230 L1630,500" marker-end="url(#ac)"/>
+<path class="c" d="M926,250 L1410,250"/>
+<path class="c" d="M926,270 L1410,270"/>
+<path class="c" d="M926,290 L1325,290 L1325,385" marker-end="url(#ac)"/>
+<path class="c" d="M926,310 L1062,310 L1062,595 L1020,595 L1020,616" marker-end="url(#ac)"/>
+<path class="c" d="M926,330 L1020,330 L1020,457" marker-end="url(#ac)"/>
+<path class="c" d="M926,350 L1110,350 L1110,378" marker-end="url(#ac)"/>
+<path class="c" d="M1856,130 L1965,130"/>
+<text class="tc" x="1970" y="134" text-anchor="start">s_Halt → testbench, G_PC_WE</text>
+<path class="c" d="M1856,150 L2090,150 L2090,1030 L545,1030 L545,640 L560,640" marker-end="url(#ac)"/>
+<text class="tc" x="1200" y="1026" text-anchor="start">s_RegWr</text>
+<path class="c" d="M1856,170 L2030,170 L2030,497" marker-end="url(#ac)"/>
+<path class="c" d="M1856,190 L1940,190 L1940,457" marker-end="url(#ac)"/>
+<path class="f" d="M1446,250 L1500,250 L1500,55 L160,55 L160,157" marker-end="url(#af)"/>
+<path class="w" d="M1446,570 L1560,570" marker-end="url(#a)"/>
+<circle cx="1490" cy="570" r="3.5" fill="#222"/>
+<path class="f" d="M1490,570 L1490,70 L230,70 L230,145" marker-end="url(#af)"/>
+<path class="f" d="M1446,770 L1480,770 L1480,85 L305,85 L305,235 L275,235" marker-end="url(#af)"/>
+<path class="f" d="M1446,270 L1470,270 L1470,100 L380,100 L380,162 L362,162" marker-end="url(#af)"/>
+<path class="f" d="M1446,470 L1460,470 L1460,115 L395,115 L395,188 L362,188" marker-end="url(#af)"/>
+<text class="tf" x="600" y="51" text-anchor="start">s_jumpreg_MEM</text>
+<text class="tf" x="600" y="66" text-anchor="start">s_aluresult_MEM</text>
+<text class="tf" x="600" y="81" text-anchor="start">add2out_MEM (branch / jal target)</text>
+<text class="tf" x="600" y="96" text-anchor="start">s_jump_MEM</text>
+<text class="tf" x="600" y="111" text-anchor="start">s_pcsrc_MEM (branch taken)</text>
+<rect class="grp" x="125" y="128" width="292" height="228"/>
+<text class="n" x="133" y="349" text-anchor="start">FETCH</text>
+<text class="e" x="180" y="349" text-anchor="start">Fetch_Control</text>
+<polygon class="b" points="180,150 140,165 140,315 180,330"/>
+<text class="mb" transform="translate(159,240.0) rotate(-90)" text-anchor="middle">mux2</text>
+<text class="mi" transform="translate(171,240.0) rotate(-90)" text-anchor="middle">mux2t1_N</text>
+<text class="m" x="171" y="168" text-anchor="start">1</text>
+<text class="m" x="171" y="273" text-anchor="start">0</text>
+<polygon class="b" points="275,200 235,215 235,325 275,340"/>
+<text class="mb" transform="translate(254,270.0) rotate(-90)" text-anchor="middle">mux1</text>
+<text class="mi" transform="translate(266,270.0) rotate(-90)" text-anchor="middle">mux2t1_N</text>
+<text class="m" x="266" y="238" text-anchor="start">1</text>
+<text class="m" x="266" y="308" text-anchor="start">0</text>
+<rect class="b" x="195" y="145" width="95" height="40"/>
+<text class="mb" x="242" y="161" text-anchor="middle">jalr_target</text>
+<text class="m" x="242" y="175" text-anchor="middle" style="font-size:8px">s_aluresult_MEM &amp; ~1</text>
+<path class="w" d="M195,165 L180,165" marker-end="url(#a)"/>
+<path class="w" d="M235,270 L180,270" marker-end="url(#a)"/>
+<path class="b" d="M370,150 Q350,175 370,200 Q335,200 320,175 Q335,150 370,150 Z"/>
+<text class="mb" x="345" y="143" text-anchor="middle">org1</text>
+<path class="w" d="M320,175 L298,175 L298,195 L255,195 L255,207" marker-end="url(#a)"/>
+<polygon class="b" points="385,260 320,285 320,325 385,350 385,315 372,305 385,295"/>
+<text class="mb" x="350" y="303" text-anchor="middle">adder1</text>
+<text class="m" x="350" y="314" text-anchor="middle" style="font-size:8px;font-style:italic">PC_Adder_N</text>
+<path class="w" d="M320,305 L275,305" marker-end="url(#a)"/>
+<circle cx="300" cy="305" r="3.5" fill="#222"/>
+<text class="p" x="297" y="300" text-anchor="end">add1out</text>
+<path class="w" d="M396,330 L385,330" marker-end="url(#a)"/>
+<text class="t" x="398" y="326" text-anchor="middle">4</text>
+<path class="w" d="M140,240 L20,240 L20,610 L35,610" marker-end="url(#a)"/>
+<text class="t" x="72" y="235" text-anchor="middle">s_PCfetch</text>
+<rect class="b" x="35" y="560" width="70" height="100" rx="0"/>
+<text class="n" x="70.0" y="600" text-anchor="middle">PC</text>
+<text class="e" x="70.0" y="615" text-anchor="middle">pc_reg</text>
+<polygon class="b" points="55,725 85,725 70,698"/>
+<circle cx="70" cy="693" r="5" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<path class="w" d="M70,688 L70,660" marker-end="url(#a)"/>
+<text class="t" x="92" y="706" text-anchor="start" font-weight="700">G_PC_WE</text>
+<text class="e" x="92" y="718" text-anchor="start">invg</text>
+<path class="c" d="M70,755 L70,725" marker-end="url(#ac)"/>
+<text class="tc" x="70" y="768" text-anchor="middle">s_Halt</text>
+<rect class="b" x="150" y="540" width="130" height="150" rx="0"/>
+<text class="n" x="215.0" y="580" text-anchor="middle">IMem</text>
+<text class="e" x="215.0" y="595" text-anchor="middle">mem</text>
+<text class="p" x="155" y="625" text-anchor="start">addr [11:2]</text>
+<text class="p" x="275" y="625" text-anchor="end">q</text>
+<path class="w" d="M105,610 L150,610" marker-end="url(#a)"/>
+<text class="t" x="127" y="604" text-anchor="middle">s_PC</text>
+<circle cx="130" cy="610" r="3.5" fill="#222"/>
+<path class="w" d="M130,610 L130,810 L440,810"/>
+<circle cx="400" cy="810" r="3.5" fill="#222"/>
+<path class="w" d="M400,810 L400,280 L385,280" marker-end="url(#a)"/>
+<text class="t" x="250" y="805" text-anchor="middle">s_PC</text>
+<path class="w" d="M300,305 L300,900 L440,900"/>
+<text class="t" x="370" y="895" text-anchor="middle">s_pc_plus4</text>
+<path class="w" d="M280,610 L440,610"/>
+<text class="t" x="360" y="604" text-anchor="middle">s_Inst</text>
+<path class="bus" d="M476,610 H505"/>
+<path class="bus" d="M505,250 V940"/>
+<text class="t" x="511" y="600" text-anchor="start">s_Inst_ID</text>
+<circle cx="505" cy="610" r="4" fill="#222"/>
+<path class="w" d="M505,250 L560,250" marker-end="url(#a)"/>
+<rect class="b" x="560" y="120" width="140" height="245" rx="0"/>
+<text class="n" x="630.0" y="240" text-anchor="middle">CONTROL</text>
+<text class="e" x="630.0" y="255" text-anchor="middle">control_unit</text>
+<circle cx="505" cy="470" r="3.5" fill="#222"/>
+<circle cx="505" cy="510" r="3.5" fill="#222"/>
+<circle cx="505" cy="725" r="3.5" fill="#222"/>
+<path class="w" d="M505,470 L560,470" marker-end="url(#a)"/>
+<text class="t" x="530" y="465" text-anchor="middle">[19-15]</text>
+<path class="w" d="M505,510 L560,510" marker-end="url(#a)"/>
+<text class="t" x="530" y="505" text-anchor="middle">[24-20]</text>
+<rect class="b" x="560" y="440" width="170" height="220" rx="0"/>
+<text class="n" x="645.0" y="535" text-anchor="middle">REGS</text>
+<text class="e" x="645.0" y="550" text-anchor="middle">regfile</text>
+<text class="p" x="565" y="474" text-anchor="start">rs1</text>
+<text class="p" x="565" y="514" text-anchor="start">rs2</text>
+<text class="p" x="565" y="564" text-anchor="start">wraddr</text>
+<text class="p" x="565" y="604" text-anchor="start">i_Din</text>
+<text class="p" x="565" y="644" text-anchor="start">iWE</text>
+<text class="p" x="725" y="474" text-anchor="end">read1</text>
+<text class="p" x="725" y="634" text-anchor="end">read2</text>
+<path class="w" d="M730,470 L890,470"/>
+<text class="t" x="810" y="465" text-anchor="middle">s_read1</text>
+<path class="w" d="M730,630 L890,630"/>
+<text class="t" x="810" y="625" text-anchor="middle">s_read2</text>
+<path class="w" d="M505,725 L560,725" marker-end="url(#a)"/>
+<rect class="b" x="560" y="690" width="130" height="70" rx="30"/>
+<text class="n" x="625.0" y="720" text-anchor="middle">IMM</text>
+<text class="e" x="625.0" y="735" text-anchor="middle">immgen</text>
+<path class="w" d="M690,725 L890,725"/>
+<text class="t" x="790" y="720" text-anchor="middle">s_immgen</text>
+<path class="w" d="M476,810 L890,810"/>
+<text class="t" x="790" y="805" text-anchor="middle">s_PC_ID</text>
+<path class="w" d="M476,900 L890,900"/>
+<text class="t" x="790" y="895" text-anchor="middle">s_pc_plus4_ID</text>
+<path class="w" d="M505,940 L890,940"/>
+<text class="t" x="790" y="935" text-anchor="middle">s_Inst_ID</text>
+<text class="t" x="645" y="381" text-anchor="middle" font-weight="700">iCLK</text>
+<path class="w" d="M645,385 L645,396"/>
+<polygon class="b" points="631,396 659,396 645,420"/>
+<circle cx="645" cy="425" r="5" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<path class="w" d="M645,430 L645,440" marker-end="url(#a)"/>
+<text class="t" x="665" y="408" text-anchor="start" font-weight="700">G_REG_CLK</text>
+<text class="e" x="665" y="420" text-anchor="start">invg</text>
+<text class="p" x="652" y="437" text-anchor="start">s_RegClk</text>
+<text class="p" x="645" y="454" text-anchor="middle">iCLK</text>
+<polygon class="b" points="1000,450 1040,463 1040,552 1000,565"/>
+<text class="mb" transform="translate(1019,507.5) rotate(-90)" text-anchor="middle">ALUSRCA_MUX</text>
+<text class="mi" transform="translate(1031,507.5) rotate(-90)" text-anchor="middle">mux4t1_N</text>
+<text class="m" x="1003" y="473" text-anchor="start">0</text>
+<text class="m" x="1003" y="498" text-anchor="start">1</text>
+<text class="m" x="1003" y="523" text-anchor="start">2</text>
+<text class="m" x="1003" y="548" text-anchor="start">3</text>
+<polygon class="b" points="1000,610 1040,623 1040,687 1000,700"/>
+<text class="mb" transform="translate(1019,655.0) rotate(-90)" text-anchor="middle">ALUSRC_MUX</text>
+<text class="mi" transform="translate(1031,655.0) rotate(-90)" text-anchor="middle">mux2t1_N</text>
+<text class="m" x="1003" y="633" text-anchor="start">0</text>
+<text class="m" x="1003" y="683" text-anchor="start">1</text>
+<path class="w" d="M926,470 L1000,470" marker-end="url(#a)"/>
+<text class="t" x="962" y="465" text-anchor="middle">s_read1_EX</text>
+<path class="w" d="M926,630 L1000,630" marker-end="url(#a)"/>
+<text class="t" x="958" y="625" text-anchor="middle">s_read2_EX</text>
+<circle cx="985" cy="630" r="3.5" fill="#222"/>
+<path class="w" d="M985,630 L985,870 L1410,870"/>
+<text class="t" x="1110" y="865" text-anchor="middle">s_read2_EX</text>
+<path class="w" d="M926,725 L1130,725" marker-end="url(#a)"/>
+<text class="t" x="1050" y="720" text-anchor="middle">s_immgen_EX</text>
+<circle cx="970" cy="725" r="3.5" fill="#222"/>
+<path class="w" d="M970,725 L970,680 L1000,680" marker-end="url(#a)"/>
+<path class="w" d="M926,810 L1130,810" marker-end="url(#a)"/>
+<text class="t" x="1050" y="805" text-anchor="middle">s_PC_EX</text>
+<circle cx="945" cy="810" r="3.5" fill="#222"/>
+<path class="w" d="M945,810 L945,495 L1000,495" marker-end="url(#a)"/>
+<path class="w" d="M980,520 L1000,520" marker-end="url(#a)"/>
+<text class="t" x="976" y="524" text-anchor="end">0</text>
+<path class="w" d="M980,545 L1000,545" marker-end="url(#a)"/>
+<text class="t" x="976" y="549" text-anchor="end">0</text>
+<path class="w" d="M926,900 L1410,900"/>
+<text class="t" x="1110" y="895" text-anchor="middle">s_pc_plus4_EX</text>
+<path class="w" d="M926,940 L1410,940"/>
+<text class="t" x="1110" y="935" text-anchor="middle">s_Inst_EX</text>
+<path class="w" d="M1040,507 L1120,507" marker-end="url(#a)"/>
+<text class="t" x="1090" y="501" text-anchor="middle">s_aluA</text>
+<path class="w" d="M1040,655 L1120,655" marker-end="url(#a)"/>
+<text class="t" x="1085" y="649" text-anchor="middle">s_aluB</text>
+<polygon class="b" points="1120,440 1220,500 1220,640 1120,700 1120,600 1142,570 1120,540"/>
+<text class="n" x="1180" y="566" text-anchor="middle">ALU_U</text>
+<text class="e" x="1180" y="582" text-anchor="middle">alu</text>
+<path class="w" d="M1220,520 L1240,520"/>
+<text class="p" x="1244" y="524" text-anchor="start">zero (n/c)</text>
+<path class="w" d="M1220,570 L1410,570"/>
+<text class="t" x="1300" y="564" text-anchor="middle">s_aluresult</text>
+<circle cx="1350" cy="570" r="3.5" fill="#222"/>
+<path class="w" d="M1350,570 L1350,600" marker-end="url(#a)"/>
+<text class="t" x="1350" y="612" text-anchor="middle">oALUOut</text>
+<rect class="b" x="1075" y="378" width="120" height="54" rx="0"/>
+<text class="n" x="1135.0" y="400" text-anchor="middle">ALU_CTRL</text>
+<text class="e" x="1135.0" y="415" text-anchor="middle">aluctrlr</text>
+<path class="w" d="M1135,432 L1135,448" marker-end="url(#a)"/>
+<text class="p" x="1140" y="445" text-anchor="start">s_aluctrl</text>
+<path class="w" d="M1165,360 L1165,378" marker-end="url(#a)"/>
+<text class="t" x="1171" y="368" text-anchor="start">s_Inst_EX[30, 14:12]</text>
+<rect class="b" x="1280" y="385" width="90" height="125" rx="0"/>
+<text class="n" x="1325.0" y="468" text-anchor="middle">BRANCH_U</text>
+<text class="e" x="1325.0" y="483" text-anchor="middle">branch_logic</text>
+<path class="w" d="M1260,405 L1280,405" marker-end="url(#a)"/>
+<text class="t" x="1257" y="409" text-anchor="end">s_read1_EX</text>
+<path class="w" d="M1260,425 L1280,425" marker-end="url(#a)"/>
+<text class="t" x="1257" y="429" text-anchor="end">s_read2_EX</text>
+<path class="w" d="M1260,445 L1280,445" marker-end="url(#a)"/>
+<text class="t" x="1257" y="449" text-anchor="end">s_Inst_EX[14:12]</text>
+<path class="w" d="M1370,470 L1410,470"/>
+<text class="t" x="1390" y="464" text-anchor="middle">s_pcsrc</text>
+<polygon class="new" points="1130,710 1200,744 1200,796 1130,830 1130,782 1146,770 1130,758"/>
+<text class="mb" x="1170" y="767" text-anchor="middle">adder2</text>
+<text class="m" x="1170" y="778" text-anchor="middle" style="font-size:8px;font-style:italic">PC_Adder_N</text>
+<path class="w" d="M1200,770 L1410,770"/>
+<text class="t" x="1300" y="764" text-anchor="middle">add2out</text>
+<circle cx="1490" cy="470" r="3.5" fill="#222"/>
+<path class="w" d="M1490,470 L1820,470"/>
+<text class="t" x="1640" y="465" text-anchor="middle">s_aluresult_MEM</text>
+<text class="t" x="1525" y="564" text-anchor="middle">s_DMemAddr</text>
+<circle cx="1530" cy="570" r="3.5" fill="#222"/>
+<path class="w" d="M1530,570 L1530,790" marker-end="url(#a)"/>
+<text class="t" x="1535" y="720" text-anchor="start">[1:0]</text>
+<rect class="b" x="1560" y="500" width="140" height="200" rx="0"/>
+<text class="n" x="1630.0" y="610" text-anchor="middle">DMem</text>
+<text class="e" x="1630.0" y="625" text-anchor="middle">mem</text>
+<text class="p" x="1565" y="574" text-anchor="start">addr [11:2]</text>
+<text class="p" x="1695" y="574" text-anchor="end">q</text>
+<text class="p" x="1630" y="516" text-anchor="middle">we</text>
+<text class="p" x="1590" y="694" text-anchor="middle">data</text>
+<text class="p" x="1625" y="694" text-anchor="middle">be</text>
+<rect class="b" x="1500" y="790" width="150" height="90" rx="0"/>
+<text class="n" x="1575.0" y="830" text-anchor="middle">STORE_U</text>
+<text class="e" x="1575.0" y="845" text-anchor="middle">store_ext</text>
+<text class="p" x="1505" y="866" text-anchor="start">i_data</text>
+<path class="w" d="M1446,870 L1500,870" marker-end="url(#a)"/>
+<text class="t" x="1472" y="864" text-anchor="middle" style="font-size:8.5px">s_read2_MEM</text>
+<path class="w" d="M1590,790 L1590,700" marker-end="url(#a)"/>
+<text class="t" x="1585" y="750" text-anchor="end">s_DMemData</text>
+<path class="w" d="M1625,790 L1625,700" marker-end="url(#a)"/>
+<text class="t" x="1630" y="750" text-anchor="start">s_DMemBE</text>
+<path class="w" d="M1446,900 L1820,900"/>
+<text class="t" x="1720" y="895" text-anchor="middle">s_pc_plus4_MEM</text>
+<path class="w" d="M1446,940 L1820,940"/>
+<text class="t" x="1500" y="935" text-anchor="middle">s_Inst_MEM</text>
+<text class="t" x="1700" y="935" text-anchor="middle">s_Inst_MEM[11:7] (rd)</text>
+<circle cx="1600" cy="940" r="3.5" fill="#222"/>
+<path class="w" d="M1600,940 L1600,880" marker-end="url(#a)"/>
+<text class="t" x="1605" y="922" text-anchor="start">[14:12]</text>
+<circle cx="1775" cy="940" r="3.5" fill="#222"/>
+<path class="w" d="M1775,940 L1775,640" marker-end="url(#a)"/>
+<text class="t" x="1780" y="780" text-anchor="start">[14:12]</text>
+<path class="w" d="M1700,570 L1745,570" marker-end="url(#a)"/>
+<text class="t" x="1722" y="564" text-anchor="middle" style="font-size:8.5px">s_DMemOut</text>
+<rect class="b" x="1745" y="530" width="65" height="110" rx="0"/>
+<text class="n" x="1777.5" y="585" text-anchor="middle">LOAD_U</text>
+<text class="e" x="1777.5" y="600" text-anchor="middle">load_ext</text>
+<circle cx="1760" cy="470" r="3.5" fill="#222"/>
+<path class="w" d="M1760,470 L1760,530" marker-end="url(#a)"/>
+<text class="t" x="1765" y="512" text-anchor="start">[1:0]</text>
+<path class="w" d="M1810,570 L1820,570"/>
+<polygon class="b" points="1920,450 1960,463 1960,577 1920,590"/>
+<text class="mb" transform="translate(1939,520.0) rotate(-90)" text-anchor="middle">MEMTOREG_MUX</text>
+<text class="mi" transform="translate(1951,520.0) rotate(-90)" text-anchor="middle">mux2t1_N</text>
+<text class="m" x="1923" y="473" text-anchor="start">0</text>
+<text class="m" x="1923" y="573" text-anchor="start">1</text>
+<polygon class="b" points="2010,490 2050,503 2050,687 2010,700"/>
+<text class="mb" transform="translate(2029,595.0) rotate(-90)" text-anchor="middle">LINK_MUX</text>
+<text class="mi" transform="translate(2041,595.0) rotate(-90)" text-anchor="middle">mux2t1_N</text>
+<text class="m" x="2013" y="523" text-anchor="start">0</text>
+<text class="m" x="2013" y="683" text-anchor="start">1</text>
+<path class="w" d="M1856,470 L1920,470" marker-end="url(#a)"/>
+<text class="t" x="1888" y="464" text-anchor="middle" style="font-size:8.5px">s_aluresult_WB</text>
+<path class="w" d="M1856,570 L1920,570" marker-end="url(#a)"/>
+<text class="t" x="1888" y="564" text-anchor="middle" style="font-size:8.5px">s_loaddata_WB</text>
+<path class="w" d="M1960,520 L2010,520" marker-end="url(#a)"/>
+<text class="t" x="1985" y="514" text-anchor="middle">s_mux2out</text>
+<path class="w" d="M1856,900 L1985,900 L1985,680 L2010,680" marker-end="url(#a)"/>
+<text class="t" x="1925" y="895" text-anchor="middle">s_pc_plus4_WB</text>
+<path class="f" d="M2050,595 L2110,595 L2110,1050 L535,1050 L535,600 L560,600" marker-end="url(#af)"/>
+<text class="tf" x="1200" y="1046" text-anchor="start">s_RegWrData</text>
+<path class="f" d="M1856,940 L1880,940 L1880,1070 L525,1070 L525,560 L560,560" marker-end="url(#af)"/>
+<text class="tf" x="1200" y="1066" text-anchor="start">s_RegWrAddr</text>
+<rect class="reg" x="440" y="125" width="36" height="865"/>
+<text class="rn" transform="translate(463,395) rotate(-90)" text-anchor="middle">IF_ID</text>
+<rect class="reg" x="890" y="125" width="36" height="865"/>
+<text class="rn" transform="translate(913,395) rotate(-90)" text-anchor="middle">ID_EX</text>
+<rect class="reg" x="1410" y="125" width="36" height="865"/>
+<text class="rn" transform="translate(1433,395) rotate(-90)" text-anchor="middle">EX_MEM</text>
+<rect class="reg" x="1820" y="125" width="36" height="865"/>
+<text class="rn" transform="translate(1843,395) rotate(-90)" text-anchor="middle">MEM_WB</text>
+<rect x="28" y="930" width="404" height="150" fill="#fff" stroke="#bbb"/>
+<text class="nh" x="40" y="950" text-anchor="start">Legend</text>
+<path class="w" d="M40,968 L80,968"/>
+<text class="nt" x="90" y="972" text-anchor="start">Data signal</text>
+<path class="c" d="M40,988 L80,988"/>
+<text class="nt" x="90" y="992" text-anchor="start">Control signal from CONTROL</text>
+<path class="f" d="M40,1008 L80,1008"/>
+<text class="nt" x="90" y="1012" text-anchor="start">Feedback to an earlier stage</text>
+<rect class="reg" x="40" y="1020" width="40" height="14"/>
+<text class="nt" x="90" y="1032" text-anchor="start">Pipeline register (new, on iCLK)</text>
+<rect class="new" x="40" y="1044" width="40" height="14"/>
+<text class="nt" x="90" y="1056" text-anchor="start">Moved out of Fetch_Control into EX</text>
+<text class="nt" x="90" y="1073" text-anchor="start">Dots are junctions; plain crossings are not connected.</text>
+<rect x="10" y="1105" width="700" height="168" fill="#fafafa" stroke="#bbb"/>
+<text class="nh" x="24" y="1128" text-anchor="start">Where Fetch_Control goes</text>
+<text class="nt" x="24" y="1150" text-anchor="start">adder1, mux1, mux2 stay in IF. They work on the PC.</text>
+<text class="nt" x="24" y="1169" text-anchor="start">adder2 moves to EX, because s_PC_EX and s_immgen_EX only exist there.</text>
+<text class="nt" x="24" y="1188" text-anchor="start">org1 and jalr_target can stay inside Fetch_Control, but they are driven by EX_MEM,</text>
+<text class="nt" x="24" y="1207" text-anchor="start">so they act on MEM-stage values. Stage = which register feeds it, not where it is drawn.</text>
+<text class="nt" x="24" y="1226" text-anchor="start">Branch, jal and jalr all redirect the PC while they are in MEM.</text>
+<text class="nt" x="24" y="1245" text-anchor="start">BRANCH_U sits in EX, and its result is registered as s_pcsrc_MEM.</text>
+<rect x="725" y="1105" width="700" height="168" fill="#fafafa" stroke="#bbb"/>
+<text class="nh" x="739" y="1128" text-anchor="start">Signal naming</text>
+<text class="nt" x="739" y="1150" text-anchor="start">A signal keeps its old name in the stage that creates it.</text>
+<text class="nt" x="739" y="1169" text-anchor="start">Each register it crosses adds the next stage: s_read2, s_read2_EX, s_read2_MEM.</text>
+<text class="nt" x="739" y="1188" text-anchor="start">The testbench reads the unsuffixed names, so they mark the final stage:</text>
+<text class="nt" x="739" y="1207" text-anchor="start">s_DMemWr, s_DMemAddr, s_DMemData, s_DMemBE are the MEM versions.</text>
+<text class="nt" x="739" y="1226" text-anchor="start">s_RegWr, s_RegWrAddr, s_RegWrData, s_Halt are the WB versions.</text>
+<text class="nt" x="739" y="1245" text-anchor="start">s_Inst stays the IMem output in IF.</text>
+<rect x="1440" y="1105" width="710" height="168" fill="#fafafa" stroke="#bbb"/>
+<text class="nh" x="1454" y="1128" text-anchor="start">Software rules (no forwarding, no hazard detection)</text>
+<text class="nt" x="1454" y="1150" text-anchor="start">Data hazard: 2 NOPs between an instruction that writes a register and one that reads it.</text>
+<text class="nt" x="1454" y="1169" text-anchor="start">G_REG_CLK inverts the REGS clock: writes land on the falling edge, mid-cycle.</text>
+<text class="nt" x="1454" y="1188" text-anchor="start">So a reader in ID sees the value in the second half of the writer's WB cycle.</text>
+<text class="nt" x="1454" y="1207" text-anchor="start">Control hazard: 3 NOPs after every branch, jal and jalr.</text>
+<text class="nt" x="1454" y="1226" text-anchor="start">They are fetched in the cycles before the PC redirect happens in MEM.</text>
+<text class="nt" x="1454" y="1245" text-anchor="start">s_Halt is read in WB, so wfi lets the instructions before it finish.</text>
+</svg>
