@@ -70,6 +70,8 @@ architecture structure of RISCV_Processor is
     port(clk                : in std_logic;
          rst                : in std_logic;
          Halt               : in std_logic;
+         i_PC_stall         : in std_logic;
+         i_PC_flush         : in std_logic;
          JumpReg            : in std_logic;
          ALU_Result         : in std_logic_vector(N-1 downto 0);
          add2out            : in std_logic_vector(N-1 downto 0);
@@ -86,7 +88,8 @@ architecture structure of RISCV_Processor is
     generic(WIDTH : integer);
     port(i_CLK     : in std_logic;
          i_RST     : in std_logic;
-         i_WE      : in std_logic;
+         i_stall   : in std_logic;
+         i_flush   : in std_logic;
          i_PC      : in std_logic_vector(WIDTH-1 downto 0);
          i_PCplus4 : in std_logic_vector(WIDTH-1 downto 0);
          i_inst    : in std_logic_vector(WIDTH-1 downto 0);
@@ -129,7 +132,8 @@ architecture structure of RISCV_Processor is
     generic(WIDTH : integer);
     port(i_CLK     : in std_logic;
          i_RST     : in std_logic;
-         i_WE      : in std_logic;
+         i_stall   : in std_logic;
+         i_flush   : in std_logic;
          i_halt    : in std_logic;
          i_RegWr   : in std_logic;
          i_andlink : in std_logic;
@@ -209,7 +213,8 @@ architecture structure of RISCV_Processor is
     generic(WIDTH : integer);
     port(i_CLK     : in std_logic;
          i_RST     : in std_logic;
-         i_WE      : in std_logic;
+         i_stall   : in std_logic;
+         i_flush   : in std_logic;
          i_halt    : in std_logic;
          i_RegWr   : in std_logic;
          i_andlink : in std_logic;
@@ -279,7 +284,8 @@ architecture structure of RISCV_Processor is
     generic(WIDTH : integer);
     port(i_CLK     : in std_logic;
          i_RST     : in std_logic;
-         i_WE      : in std_logic;
+         i_stall   : in std_logic;
+         i_flush   : in std_logic;
          i_halt    : in std_logic;
          i_RegWr   : in std_logic;
          i_andlink : in std_logic;
@@ -316,6 +322,13 @@ architecture structure of RISCV_Processor is
          o_RegWrData : out std_logic_vector((DATA_WIDTH-1) downto 0));
   end component;
 
+  component org3 is
+    port(i_A : in std_logic;
+         i_B : in std_logic;
+         i_C : in std_logic;
+         o_F : out std_logic);
+  end component;
+
   signal s_PCplus4, s_PCplus4_ID, s_PCplus4_EX, s_PCplus4_MEM, s_PCplus4_WB : std_logic_vector(N-1 downto 0);
   signal s_PC_ID, s_PC_EX : std_logic_vector(N-1 downto 0);
   signal s_Inst_ID, s_Inst_EX, s_Inst_MEM, s_Inst_WB : std_logic_vector(N-1 downto 0);
@@ -338,13 +351,30 @@ architecture structure of RISCV_Processor is
   signal s_immgen, s_immgen_EX : std_logic_vector(N-1 downto 0);
 
   signal s_pcsrc, s_pcsrc_MEM : std_logic;
+  signal s_ctrl_taken : std_logic;
   signal s_aluresult, s_aluresult_MEM, s_aluresult_WB : std_logic_vector(N-1 downto 0);
   signal s_add2out, s_add2out_MEM : std_logic_vector(N-1 downto 0);
 
   signal s_Ld_Data, s_Ld_Data_WB : std_logic_vector(N-1 downto 0);
 
+  signal s_PC_stall, s_IF_ID_stall, s_ID_EX_stall, s_EX_MEM_stall, s_MEM_WB_stall : std_logic;
+  signal s_PC_flush, s_IF_ID_flush, s_ID_EX_flush, s_EX_MEM_flush, s_MEM_WB_flush : std_logic;
+
 begin
   s_Ovfl <= '0';
+
+  s_PC_stall     <= '0';
+  s_IF_ID_stall  <= '0';
+  s_ID_EX_stall  <= '0';
+  s_EX_MEM_stall <= '0';
+  s_MEM_WB_stall <= '0';
+  s_PC_flush     <= '0';
+  G_CTRL_TAKEN: org3 port map(i_A => s_pcsrc, i_B => s_jump_EX, i_C => s_jumpreg_EX, o_F => s_ctrl_taken);
+
+  s_IF_ID_flush  <= s_ctrl_taken;
+  s_ID_EX_flush  <= s_ctrl_taken;
+  s_EX_MEM_flush <= '0';
+  s_MEM_WB_flush <= '0';
 
   with iInstLd select
     s_IMemAddr <= s_PC when '0',
@@ -375,11 +405,13 @@ begin
     port map(clk        => iCLK,
              rst        => iRST,
              Halt       => s_Halt,
-             JumpReg    => s_jumpreg_MEM,
-             ALU_Result => s_aluresult_MEM,
-             add2out    => s_add2out_MEM,
-             Jump       => s_jump_MEM,
-             PCSrc      => s_pcsrc_MEM,
+             i_PC_stall => s_PC_stall,
+             i_PC_flush => s_PC_flush,
+             JumpReg    => s_jumpreg_EX,
+             ALU_Result => s_aluresult,
+             add2out    => s_add2out,
+             Jump       => s_jump_EX,
+             PCSrc      => s_pcsrc,
              i_IMemOut  => s_Inst,
              o_IMemAddr => s_PC,
              current_PC => open,
@@ -390,7 +422,8 @@ begin
     generic map(WIDTH => N)
     port map(i_CLK     => iCLK,
              i_RST     => iRST,
-             i_WE      => '1',
+             i_stall   => s_IF_ID_stall,
+             i_flush   => s_IF_ID_flush,
              i_PC      => s_PC,
              i_PCplus4 => s_PCplus4,
              i_inst    => s_Inst,
@@ -431,7 +464,8 @@ begin
     generic map(WIDTH => N)
     port map(i_CLK     => iCLK,
              i_RST     => iRST,
-             i_WE      => '1',
+             i_stall   => s_ID_EX_stall,
+             i_flush   => s_ID_EX_flush,
              i_halt    => s_Halt_ID,
              i_RegWr   => s_RegWr_ID,
              i_andlink => s_andlink,
@@ -511,7 +545,8 @@ begin
     generic map(WIDTH => N)
     port map(i_CLK     => iCLK,
              i_RST     => iRST,
-             i_WE      => '1',
+             i_stall   => s_EX_MEM_stall,
+             i_flush   => s_EX_MEM_flush,
              i_halt    => s_Halt_EX,
              i_RegWr   => s_RegWr_EX,
              i_andlink => s_andlink_EX,
@@ -579,7 +614,8 @@ begin
     generic map(WIDTH => N)
     port map(i_CLK     => iCLK,
              i_RST     => iRST,
-             i_WE      => '1',
+             i_stall   => s_MEM_WB_stall,
+             i_flush   => s_MEM_WB_flush,
              i_halt    => s_Halt_MEM,
              i_RegWr   => s_RegWr_MEM,
              i_andlink => s_andlink_MEM,

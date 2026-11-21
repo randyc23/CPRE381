@@ -5,7 +5,8 @@ entity EX_MEM is
     generic(WIDTH : integer);
     port(i_CLK  : in std_logic;
          i_RST  : in std_logic;
-         i_WE   : in std_logic;
+         i_stall : in std_logic;
+         i_flush : in std_logic;
          i_halt : in std_logic;
          i_RegWr : in std_logic;
          i_andlink : in std_logic;
@@ -37,41 +38,45 @@ entity EX_MEM is
 end EX_MEM;
 
 architecture structural of EX_MEM is
-    component reg_n is
-        generic(WIDTH : integer);
-        port(i_CLK  : in std_logic;
-             i_RST  : in std_logic;
-             i_WE   : in std_logic;
-             i_Din  : in std_logic_vector(WIDTH-1 downto 0);
-             o_Dout : out std_logic_vector(WIDTH-1 downto 0));
+    component reg_n_sf is
+        generic(WIDTH     : integer;
+                FLUSH_VAL : std_logic_vector(WIDTH-1 downto 0) := (others => '0'));
+        port(i_CLK   : in std_logic;
+             i_RST   : in std_logic;
+             i_stall : in std_logic;
+             i_flush : in std_logic;
+             i_Din   : in std_logic_vector(WIDTH-1 downto 0);
+             o_Dout  : out std_logic_vector(WIDTH-1 downto 0));
     end component;
 
-    component dffg is
-        port(i_CLK  : in std_logic;
-             i_RST  : in std_logic;
-             i_WE   : in std_logic;
-             i_D    : in std_logic;
-             o_Q    : out std_logic);
+    component dffg_sf is
+        generic(FLUSH_VAL : std_logic := '0');
+        port(i_CLK   : in std_logic;
+             i_RST   : in std_logic;
+             i_stall : in std_logic;
+             i_flush : in std_logic;
+             i_D     : in std_logic;
+             o_Q     : out std_logic);
     end component;
 
     begin
-        DFF_HALT: dffg port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => i_WE, i_D => i_halt, o_Q => o_halt);
-        DFF_REGWR: dffg port map(i_CLK, i_RST, i_WE, i_RegWr, o_RegWr);
-        DFF_ANDLINK: dffg port map(i_CLK, i_RST, i_WE, i_andlink, o_andlink);
-        DFF_MEM2REG: dffg port map(i_CLK, i_RST, i_WE, i_Mem2Reg, o_Mem2Reg);
-        DFF_MEMRD: dffg port map(i_CLK, i_RST, i_WE, i_MemRd, o_MemRd);
-        DFF_DMEMWR: dffg port map(i_CLK, i_RST, i_WE, i_DMemWr, o_DMemWr);
-        DFF_JUMPREG: dffg port map(i_CLK, i_RST, i_WE, i_jumpreg, o_jumpreg);
-        DFF_JUMP: dffg port map(i_CLK, i_RST, i_WE, i_jump, o_jump);
-        DFF_PCSRC: dffg port map(i_CLK, i_RST, i_WE, i_pcsrc, o_pcsrc);
-        REG_ALUOUT: reg_n generic map(WIDTH => WIDTH)
-            port map(i_CLK, i_RST, i_WE, i_ALUout, o_ALUout);
-        REG_ADD2OUT: reg_n generic map(WIDTH => WIDTH)
-            port map(i_CLK, i_RST, i_WE, i_add2out, o_add2out);
-        REG_RD2: reg_n generic map(WIDTH => WIDTH)
-            port map(i_CLK, i_RST, i_WE, i_rd2, o_rd2);
-        REG_PCPLUS4: reg_n generic map(WIDTH => WIDTH)
-            port map(i_CLK, i_RST, i_WE, i_PCplus4, o_PCplus4);
-        REG_INST: reg_n generic map(WIDTH => WIDTH)
-            port map(i_CLK, i_RST, i_WE, i_inst, o_inst);
+        DFF_HALT: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_halt, o_halt);
+        DFF_REGWR: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_RegWr, o_RegWr);
+        DFF_ANDLINK: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_andlink, o_andlink);
+        DFF_MEM2REG: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_Mem2Reg, o_Mem2Reg);
+        DFF_MEMRD: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_MemRd, o_MemRd);
+        DFF_DMEMWR: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_DMemWr, o_DMemWr);
+        DFF_JUMPREG: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_jumpreg, o_jumpreg);
+        DFF_JUMP: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_jump, o_jump);
+        DFF_PCSRC: dffg_sf port map(i_CLK, i_RST, i_stall, i_flush, i_pcsrc, o_pcsrc);
+        REG_ALUOUT: reg_n_sf generic map(WIDTH => WIDTH)
+            port map(i_CLK, i_RST, i_stall, i_flush, i_ALUout, o_ALUout);
+        REG_ADD2OUT: reg_n_sf generic map(WIDTH => WIDTH)
+            port map(i_CLK, i_RST, i_stall, i_flush, i_add2out, o_add2out);
+        REG_RD2: reg_n_sf generic map(WIDTH => WIDTH)
+            port map(i_CLK, i_RST, i_stall, i_flush, i_rd2, o_rd2);
+        REG_PCPLUS4: reg_n_sf generic map(WIDTH => WIDTH)
+            port map(i_CLK, i_RST, i_stall, i_flush, i_PCplus4, o_PCplus4);
+        REG_INST: reg_n_sf generic map(WIDTH => WIDTH, FLUSH_VAL => x"00000013")
+            port map(i_CLK, i_RST, i_stall, i_flush, i_inst, o_inst);
 end structural;

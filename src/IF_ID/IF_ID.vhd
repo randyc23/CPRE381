@@ -5,7 +5,8 @@ entity IF_ID is
     generic(WIDTH : integer);
     port(i_CLK  : in std_logic;
          i_RST  : in std_logic;
-         i_WE   : in std_logic;
+         i_stall : in std_logic;
+         i_flush : in std_logic;
          i_PC : in std_logic_vector(WIDTH-1 downto 0);
          i_PCplus4 : in std_logic_vector(WIDTH-1 downto 0);
          i_inst : in std_logic_vector(WIDTH-1 downto 0);
@@ -15,20 +16,22 @@ entity IF_ID is
 end IF_ID;
 
 architecture structural of IF_ID is
-    component reg_n is
-        generic(WIDTH : integer);
-        port(i_CLK  : in std_logic;
-             i_RST  : in std_logic;
-             i_WE   : in std_logic;
-             i_Din  : in std_logic_vector(WIDTH-1 downto 0);
-             o_Dout : out std_logic_vector(WIDTH-1 downto 0));
+    component reg_n_sf is
+        generic(WIDTH     : integer;
+                FLUSH_VAL : std_logic_vector(WIDTH-1 downto 0) := (others => '0'));
+        port(i_CLK   : in std_logic;
+             i_RST   : in std_logic;
+             i_stall : in std_logic;
+             i_flush : in std_logic;
+             i_Din   : in std_logic_vector(WIDTH-1 downto 0);
+             o_Dout  : out std_logic_vector(WIDTH-1 downto 0));
     end component;
 
     begin
-        REG_PC: reg_n generic map(WIDTH => WIDTH)
-            port map(i_CLK, i_RST, i_WE, i_PC, o_PC);
-        REG_PCPLUS4: reg_n generic map(WIDTH => WIDTH)
-            port map(i_CLK, i_RST, i_WE, i_PCplus4, o_PCplus4);
-        REG_INST: reg_n generic map(WIDTH => WIDTH)
-            port map(i_CLK, i_RST, i_WE, i_inst, o_inst);
+        REG_PC: reg_n_sf generic map(WIDTH => WIDTH)
+            port map(i_CLK, i_RST, i_stall, i_flush, i_PC, o_PC);
+        REG_PCPLUS4: reg_n_sf generic map(WIDTH => WIDTH)
+            port map(i_CLK, i_RST, i_stall, i_flush, i_PCplus4, o_PCplus4);
+        REG_INST: reg_n_sf generic map(WIDTH => WIDTH, FLUSH_VAL => x"00000013")
+            port map(i_CLK, i_RST, i_stall, i_flush, i_inst, o_inst);
 end structural;
