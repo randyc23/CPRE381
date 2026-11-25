@@ -1,0 +1,459 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2300 1500" width="2300" height="1500" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a7fc1"/></marker>
+<marker id="af" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c2188b"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a7fc1"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d8a3a"/></marker>
+<style>
+.b{fill:#f6f8fa;stroke:#222;stroke-width:1.5}
+.new{fill:#fff4d6;stroke:#b7791f;stroke-width:2}
+.top{fill:#eceff3;stroke:#555;stroke-width:1.5}
+.w{fill:none;stroke:#222;stroke-width:1.5}
+.bus{fill:none;stroke:#1a7fc1;stroke-width:4}
+.c{fill:none;stroke:#1a7fc1;stroke-width:1.5}
+.f{fill:none;stroke:#c2188b;stroke-width:2}
+.g{fill:none;stroke:#1d8a3a;stroke-width:2}
+.reg{fill:#e7c9c9;stroke:#a33;stroke-width:1.5}
+text{paint-order:stroke;stroke:#fff;stroke-width:2.5px;stroke-linejoin:round}
+.t{font-size:10px;fill:#222}
+.tc{font-size:10px;fill:#1a7fc1}
+.tf{font-size:10.5px;fill:#c2188b;font-weight:600}
+.tg{font-size:10px;fill:#1d8a3a;font-weight:600}
+.n{font-size:13px;font-weight:700;fill:#111}
+.e{font-size:11px;font-style:italic;fill:#555}
+.p{font-size:9px;fill:#555}
+.m{font-size:9px;fill:#111}
+.mb{font-size:9px;font-weight:700;fill:#111}
+.mi{font-size:9px;font-style:italic;fill:#555}
+.h{font-size:15px;font-weight:700;fill:#111;stroke:none}
+.rn{font-size:14px;font-weight:700;fill:#611;stroke:none}
+.rp{font-size:8.5px;fill:#611;stroke:none}
+.nt{font-size:12.5px;fill:#222;stroke:none}
+.nh{font-size:14px;font-weight:700;fill:#111;stroke:none}
+</style></defs>
+<rect width="2300" height="1500" fill="#fff"/>
+<rect x="10" y="8" width="310" height="1290" fill="#eaf2fb"/>
+<text class="h" x="165.0" y="30" text-anchor="middle">IF</text>
+<rect x="390" y="8" width="360" height="1290" fill="#ecf7ee"/>
+<text class="h" x="570.0" y="30" text-anchor="middle">ID</text>
+<rect x="820" y="8" width="470" height="1290" fill="#fdf5e6"/>
+<text class="h" x="1055.0" y="30" text-anchor="middle">EX</text>
+<rect x="1360" y="8" width="490" height="1290" fill="#f3edfa"/>
+<text class="h" x="1605.0" y="30" text-anchor="middle">MEM</text>
+<rect x="1920" y="8" width="370" height="1290" fill="#eef6f6"/>
+<text class="h" x="2105.0" y="30" text-anchor="middle">WB</text>
+<rect class="reg" x="330" y="200" width="50" height="780"/>
+<text class="rn" transform="translate(360,620) rotate(-90)" text-anchor="middle">G_IF_ID</text>
+<text class="e" x="355" y="196" text-anchor="middle" style="font-size:10px">if_id</text>
+<text class="rp" x="355" y="297" text-anchor="middle">PC</text>
+<text class="rp" x="355" y="337" text-anchor="middle">PC+4</text>
+<text class="rp" x="355" y="377" text-anchor="middle">inst</text>
+<text class="rp" x="345" y="972" text-anchor="middle">stall</text>
+<text class="rp" x="365" y="972" text-anchor="middle">flush</text>
+<rect class="reg" x="760" y="200" width="50" height="780"/>
+<text class="rn" transform="translate(790,620) rotate(-90)" text-anchor="middle">G_ID_EX</text>
+<text class="e" x="785" y="196" text-anchor="middle" style="font-size:10px">id_ex</text>
+<text class="rp" x="785" y="277" text-anchor="middle">ctrl</text>
+<text class="rp" x="785" y="437" text-anchor="middle">rd1</text>
+<text class="rp" x="785" y="577" text-anchor="middle">rd2</text>
+<text class="rp" x="785" y="677" text-anchor="middle">imm</text>
+<text class="rp" x="785" y="777" text-anchor="middle">PC</text>
+<text class="rp" x="785" y="817" text-anchor="middle">PC+4</text>
+<text class="rp" x="785" y="857" text-anchor="middle">inst</text>
+<text class="rp" x="775" y="972" text-anchor="middle">stall</text>
+<text class="rp" x="795" y="972" text-anchor="middle">flush</text>
+<rect class="reg" x="1300" y="200" width="50" height="780"/>
+<text class="rn" transform="translate(1330,620) rotate(-90)" text-anchor="middle">G_EX_MEM</text>
+<text class="e" x="1325" y="196" text-anchor="middle" style="font-size:10px">ex_mem</text>
+<text class="rp" x="1325" y="227" text-anchor="middle">ctrl</text>
+<text class="rp" x="1325" y="397" text-anchor="middle">pcsrc</text>
+<text class="rp" x="1325" y="467" text-anchor="middle">ALUout</text>
+<text class="rp" x="1325" y="537" text-anchor="middle">add2out</text>
+<text class="rp" x="1325" y="907" text-anchor="middle">rd2</text>
+<text class="rp" x="1325" y="932" text-anchor="middle">PC+4</text>
+<text class="rp" x="1325" y="957" text-anchor="middle">inst</text>
+<text class="rp" x="1315" y="972" text-anchor="middle">stall</text>
+<text class="rp" x="1335" y="972" text-anchor="middle">flush</text>
+<rect class="reg" x="1860" y="200" width="50" height="780"/>
+<text class="rn" transform="translate(1890,620) rotate(-90)" text-anchor="middle">G_MEM_WB</text>
+<text class="e" x="1885" y="196" text-anchor="middle" style="font-size:10px">mem_wb</text>
+<text class="rp" x="1885" y="227" text-anchor="middle">ctrl</text>
+<text class="rp" x="1885" y="687" text-anchor="middle">DataLd</text>
+<text class="rp" x="1885" y="877" text-anchor="middle">ALUout</text>
+<text class="rp" x="1885" y="932" text-anchor="middle">PC+4</text>
+<text class="rp" x="1885" y="957" text-anchor="middle">inst</text>
+<text class="rp" x="1875" y="972" text-anchor="middle">stall</text>
+<text class="rp" x="1895" y="972" text-anchor="middle">flush</text>
+<rect class="b" x="60" y="260" width="200" height="360"/>
+<text class="n" x="160.0" y="440" text-anchor="middle">G_IF</text>
+<text class="e" x="160.0" y="455" text-anchor="middle">IF_Stage</text>
+<text class="p" transform="translate(94,275) rotate(90)" text-anchor="start">ALU_Result</text>
+<text class="p" transform="translate(124,275) rotate(90)" text-anchor="start">add2out</text>
+<text class="p" transform="translate(154,275) rotate(90)" text-anchor="start">PCSrc</text>
+<text class="p" transform="translate(184,275) rotate(90)" text-anchor="start">JumpReg</text>
+<text class="p" transform="translate(214,275) rotate(90)" text-anchor="start">Jump</text>
+<text class="p" x="255" y="316" text-anchor="end">o_IMemAddr</text>
+<text class="p" x="255" y="344" text-anchor="end">PCplus4</text>
+<text class="p" x="65" y="564" text-anchor="start">Halt</text>
+<text class="p" x="100" y="612" text-anchor="middle">i_PC_stall</text>
+<text class="p" x="165" y="612" text-anchor="middle">i_PC_flush</text>
+<text class="p" x="230" y="612" text-anchor="middle">i_IMemOut</text>
+<path class="f" d="M40,560 L60,560" marker-end="url(#af)"/>
+<text class="tf" x="14" y="552" text-anchor="start" style="font-size:9.5px">s_Halt</text>
+<text class="p" x="14" y="578" text-anchor="start">(G_WB)</text>
+<path class="w" d="M165,636 L165,622" marker-end="url(#a)"/>
+<text class="p" x="165" y="647" text-anchor="middle">'0'</text>
+<path class="w" d="M260,300 L330,300" marker-end="url(#a)"/>
+<text class="t" x="300" y="294" text-anchor="middle">s_PC</text>
+<path class="w" d="M260,340 L330,340" marker-end="url(#a)"/>
+<text class="t" x="300" y="334" text-anchor="middle" style="font-size:9px">s_PCplus4</text>
+<circle cx="285" cy="300" r="3.5" fill="#222"/>
+<path class="w" d="M285,300 L285,665 L130,665 L130,740 L150,740" marker-end="url(#a)"/>
+<polygon class="top" points="150,712 185,725 185,785 150,798"/>
+<text class="mb" transform="translate(172,755.0) rotate(-90)" text-anchor="middle">iInstLd</text>
+<text class="mi" transform="translate(183,755.0) rotate(-90)" text-anchor="middle">mux</text>
+<text class="m" x="153" y="743" text-anchor="start">0</text>
+<text class="m" x="153" y="773" text-anchor="start">1</text>
+<path class="w" d="M25,700 L167,700 L167,717" marker-end="url(#a)"/>
+<text class="t" x="25" y="694" text-anchor="start">iInstLd</text>
+<path class="w" d="M25,770 L150,770" marker-end="url(#a)"/>
+<text class="t" x="25" y="764" text-anchor="start">iInstAddr</text>
+<path class="w" d="M185,755 L200,755" marker-end="url(#a)"/>
+<text class="p" x="168" y="832" text-anchor="middle">s_IMemAddr</text>
+<rect class="top" x="200" y="700" width="100" height="170"/>
+<text class="n" x="250.0" y="725" text-anchor="middle">IMem</text>
+<text class="e" x="250.0" y="740" text-anchor="middle">mem</text>
+<text class="p" x="205" y="759" text-anchor="start">addr[11:2]</text>
+<text class="p" x="250" y="790" text-anchor="middle">data ← iInstExt</text>
+<text class="p" x="250" y="803" text-anchor="middle">be ← "1111"</text>
+<text class="p" x="250" y="816" text-anchor="middle">we ← iInstLd</text>
+<text class="p" x="295" y="784" text-anchor="end">q</text>
+<path class="w" d="M300,780 L315,780 L315,380 L330,380" marker-end="url(#a)"/>
+<text class="t" x="300" y="374" text-anchor="middle" style="font-size:9px">s_Inst</text>
+<circle cx="315" cy="640" r="3.5" fill="#222"/>
+<path class="w" d="M315,640 L230,640 L230,622" marker-end="url(#a)"/>
+<circle cx="1274" cy="470" r="3.5" fill="#222"/>
+<path class="f" d="M1274,470 L1274,50 L90,50 L90,258" marker-end="url(#af)"/>
+<circle cx="1262" cy="540" r="3.5" fill="#222"/>
+<path class="f" d="M1262,540 L1262,70 L120,70 L120,258" marker-end="url(#af)"/>
+<circle cx="1250" cy="400" r="3.5" fill="#222"/>
+<path class="f" d="M1250,400 L1250,90 L150,90 L150,258" marker-end="url(#af)"/>
+<circle cx="835" cy="280" r="3.5" fill="#1a7fc1"/>
+<path class="f" d="M835,280 L835,110 L180,110 L180,258" marker-end="url(#af)"/>
+<circle cx="825" cy="280" r="3.5" fill="#1a7fc1"/>
+<path class="f" d="M825,280 L825,130 L210,130 L210,258" marker-end="url(#af)"/>
+<text class="tf" x="470" y="46" text-anchor="start">s_aluresult</text>
+<text class="tf" x="470" y="66" text-anchor="start">s_add2out</text>
+<text class="tf" x="470" y="86" text-anchor="start">s_pcsrc</text>
+<text class="tf" x="470" y="106" text-anchor="start">s_jumpreg_EX</text>
+<text class="tf" x="470" y="126" text-anchor="start">s_jump_EX</text>
+<rect class="b" x="450" y="260" width="240" height="460"/>
+<text class="n" x="570.0" y="470" text-anchor="middle">G_ID</text>
+<text class="e" x="570.0" y="485" text-anchor="middle">ID</text>
+<text class="p" x="455" y="303" text-anchor="start">i_PC</text>
+<text class="p" x="455" y="343" text-anchor="start">i_PCplus4</text>
+<text class="p" x="455" y="383" text-anchor="start">i_inst</text>
+<text class="p" x="455" y="603" text-anchor="start">i_RegWr_WB</text>
+<text class="p" x="455" y="633" text-anchor="start">i_RegWrAddr_WB</text>
+<text class="p" x="455" y="663" text-anchor="start">i_RegWrData_WB</text>
+<text class="p" x="685" y="283" text-anchor="end">ctrl (12)</text>
+<text class="p" x="685" y="443" text-anchor="end">o_rd1</text>
+<text class="p" x="685" y="583" text-anchor="end">o_rd2</text>
+<text class="p" x="685" y="683" text-anchor="end">o_immgen</text>
+<path class="w" d="M380,300 L450,300" marker-end="url(#a)"/>
+<path class="w" d="M380,340 L450,340" marker-end="url(#a)"/>
+<path class="w" d="M380,380 L450,380" marker-end="url(#a)"/>
+<text class="t" x="420" y="294" text-anchor="middle" style="font-size:8.5px">s_PC_ID</text>
+<text class="t" x="428" y="334" text-anchor="middle" style="font-size:8.5px">s_PCplus4_ID</text>
+<text class="t" x="420" y="374" text-anchor="middle" style="font-size:8.5px">s_Inst_ID</text>
+<circle cx="395" cy="300" r="3.5" fill="#222"/>
+<path class="w" d="M395,300 L395,780 L760,780" marker-end="url(#a)"/>
+<circle cx="405" cy="340" r="3.5" fill="#222"/>
+<path class="w" d="M405,340 L405,820 L760,820" marker-end="url(#a)"/>
+<circle cx="415" cy="380" r="3.5" fill="#222"/>
+<path class="w" d="M415,380 L415,860 L760,860" marker-end="url(#a)"/>
+<text class="t" x="600" y="774" text-anchor="middle">s_PC_ID</text>
+<text class="t" x="600" y="814" text-anchor="middle">s_PCplus4_ID</text>
+<text class="t" x="600" y="854" text-anchor="middle">s_Inst_ID</text>
+<path class="bus" d="M690,280 L760,280" marker-end="url(#ab)"/>
+<text class="tc" x="725" y="272" text-anchor="middle">ctrl_ID</text>
+<path class="w" d="M690,440 L760,440" marker-end="url(#a)"/>
+<text class="t" x="725" y="434" text-anchor="middle">s_rd1</text>
+<path class="w" d="M690,580 L760,580" marker-end="url(#a)"/>
+<text class="t" x="725" y="574" text-anchor="middle">s_rd2</text>
+<path class="w" d="M690,680 L760,680" marker-end="url(#a)"/>
+<text class="t" x="725" y="674" text-anchor="middle">s_immgen</text>
+<path class="bus" d="M810,280 L1010,280" marker-end="url(#ab)"/>
+<text class="tc" x="930" y="272" text-anchor="middle">ctrl_EX (12)</text>
+<circle cx="845" cy="280" r="3.5" fill="#1a7fc1"/>
+<path class="bus" d="M845,280 L845,230 L1300,230"/>
+<text class="tc" x="1110" y="222" text-anchor="middle">ctrl_EX (8) → G_EX_MEM</text>
+<polygon class="new" points="885,420 925,433 925,507 885,520"/>
+<text class="mb" transform="translate(907,470.0) rotate(-90)" text-anchor="middle">G_FWD_A</text>
+<text class="mi" transform="translate(918,470.0) rotate(-90)" text-anchor="middle">mux4t1_N</text>
+<text class="m" x="888" y="443" text-anchor="start">00</text>
+<text class="m" x="888" y="468" text-anchor="start">01</text>
+<text class="m" x="888" y="493" text-anchor="start">10</text>
+<text class="m" x="888" y="513" text-anchor="start">11</text>
+<polygon class="new" points="885,560 925,573 925,647 885,660"/>
+<text class="mb" transform="translate(907,610.0) rotate(-90)" text-anchor="middle">G_FWD_B</text>
+<text class="mi" transform="translate(918,610.0) rotate(-90)" text-anchor="middle">mux4t1_N</text>
+<text class="m" x="888" y="583" text-anchor="start">00</text>
+<text class="m" x="888" y="608" text-anchor="start">01</text>
+<text class="m" x="888" y="633" text-anchor="start">10</text>
+<text class="m" x="888" y="653" text-anchor="start">11</text>
+<path class="w" d="M810,440 L885,440" marker-end="url(#a)"/>
+<text class="t" x="847" y="434" text-anchor="middle" style="font-size:8.5px">s_rd1_EX</text>
+<path class="w" d="M810,580 L885,580" marker-end="url(#a)"/>
+<text class="t" x="835" y="574" text-anchor="middle" style="font-size:8.5px">s_rd2_EX</text>
+<path class="w" d="M925,470 L1010,470" marker-end="url(#a)"/>
+<text class="t" x="968" y="464" text-anchor="middle" style="font-size:8.5px">s_rs1_fwd_EX</text>
+<circle cx="955" cy="610" r="3.5" fill="#222"/>
+<path class="w" d="M925,610 L1010,610" marker-end="url(#a)"/>
+<text class="t" x="985" y="604" text-anchor="middle" style="font-size:8.5px">s_rs2_fwd_EX</text>
+<path class="w" d="M955,610 L955,910 L1300,910" marker-end="url(#a)"/>
+<text class="t" x="1150" y="904" text-anchor="middle">s_rs2_fwd_EX</text>
+<rect class="b" x="1010" y="260" width="220" height="630"/>
+<text class="n" x="1120.0" y="700" text-anchor="middle">G_EX</text>
+<text class="e" x="1120.0" y="715" text-anchor="middle">EX</text>
+<text class="p" x="1015" y="283" text-anchor="start">ctrl</text>
+<text class="p" x="1015" y="473" text-anchor="start">i_rd1</text>
+<text class="p" x="1015" y="613" text-anchor="start">i_rd2</text>
+<text class="p" x="1015" y="683" text-anchor="start">i_Imm ← s_immgen_EX</text>
+<text class="p" x="1015" y="783" text-anchor="start">i_PC ← s_PC_EX</text>
+<text class="p" x="1015" y="823" text-anchor="start">i_PC_4 ← s_PCplus4_EX</text>
+<text class="p" x="1015" y="863" text-anchor="start">i_inst ← s_Inst_EX</text>
+<text class="p" x="1225" y="403" text-anchor="end">o_pcsrc</text>
+<text class="p" x="1225" y="473" text-anchor="end">o_ALUout</text>
+<text class="p" x="1225" y="543" text-anchor="end">o_add2out</text>
+<path class="w" d="M810,680 L1010,680" marker-end="url(#a)"/>
+<path class="w" d="M810,780 L1010,780" marker-end="url(#a)"/>
+<circle cx="970" cy="820" r="3.5" fill="#222"/>
+<path class="w" d="M810,820 L1010,820" marker-end="url(#a)"/>
+<circle cx="985" cy="860" r="3.5" fill="#222"/>
+<path class="w" d="M810,860 L1010,860" marker-end="url(#a)"/>
+<path class="w" d="M970,820 L970,935 L1300,935" marker-end="url(#a)"/>
+<text class="t" x="1150" y="929" text-anchor="middle">s_PCplus4_EX</text>
+<path class="w" d="M985,860 L985,960 L1300,960" marker-end="url(#a)"/>
+<text class="t" x="1150" y="954" text-anchor="middle">s_Inst_EX</text>
+<path class="w" d="M1230,400 L1300,400" marker-end="url(#a)"/>
+<path class="w" d="M1230,470 L1300,470" marker-end="url(#a)"/>
+<path class="w" d="M1230,540 L1300,540" marker-end="url(#a)"/>
+<circle cx="1240" cy="470" r="3.5" fill="#222"/>
+<path class="w" d="M1240,470 L1240,500" marker-end="url(#a)"/>
+<text class="t" x="1240" y="512" text-anchor="middle">oALUOut</text>
+<path class="bus" d="M1350,230 L1860,230" marker-end="url(#ab)"/>
+<text class="tc" x="1700" y="222" text-anchor="middle">ctrl_MEM (4) → G_MEM_WB</text>
+<circle cx="1400" cy="230" r="3.5" fill="#1a7fc1"/>
+<path class="bus" d="M1400,230 L1400,280 L1440,280" marker-end="url(#ab)"/>
+<text class="tc" x="1405" y="255" text-anchor="start">ctrl_MEM (8)</text>
+<path class="w" d="M1350,400 L1440,400" marker-end="url(#a)"/>
+<text class="t" x="1395" y="394" text-anchor="middle" style="font-size:8.5px">s_pcsrc_MEM</text>
+<path class="w" d="M1350,470 L1440,470" marker-end="url(#a)"/>
+<text class="t" x="1395" y="464" text-anchor="middle" style="font-size:8.5px">s_aluresult_MEM</text>
+<circle cx="1362" cy="470" r="3.5" fill="#222"/>
+<path class="w" d="M1362,470 L1362,880 L1860,880" marker-end="url(#a)"/>
+<text class="t" x="1700" y="874" text-anchor="middle">s_aluresult_MEM</text>
+<polygon class="new" points="1395,760 1430,773 1430,827 1395,840"/>
+<text class="mb" transform="translate(1417,800.0) rotate(-90)" text-anchor="middle">G_FWD_M</text>
+<text class="mi" transform="translate(1428,800.0) rotate(-90)" text-anchor="middle">mux2t1_N</text>
+<text class="m" x="1398" y="783" text-anchor="start">0</text>
+<text class="m" x="1398" y="818" text-anchor="start">1</text>
+<path class="w" d="M1350,910 L1375,910 L1375,780 L1395,780" marker-end="url(#a)"/>
+<text class="t" x="1390" y="926" text-anchor="start" style="font-size:8.5px">s_rd2_MEM</text>
+<path class="w" d="M1430,800 L1470,800 L1470,722" marker-end="url(#a)"/>
+<text class="t" x="1478" y="790" text-anchor="start" style="font-size:8.5px">s_rd2_fwd_MEM</text>
+<rect class="b" x="1440" y="260" width="180" height="460"/>
+<text class="n" x="1530.0" y="600" text-anchor="middle">G_MEM</text>
+<text class="e" x="1530.0" y="615" text-anchor="middle">M</text>
+<text class="p" x="1445" y="283" text-anchor="start">ctrl</text>
+<text class="p" x="1445" y="403" text-anchor="start">i_pcsrc</text>
+<text class="p" x="1445" y="473" text-anchor="start">i_ALUout</text>
+<text class="p" x="1615" y="423" text-anchor="end">o_DMemAddr</text>
+<text class="p" x="1615" y="463" text-anchor="end">o_DMemData</text>
+<text class="p" x="1615" y="503" text-anchor="end">o_DMemBE</text>
+<text class="p" x="1615" y="543" text-anchor="end">o_DMemWr</text>
+<text class="p" x="1615" y="653" text-anchor="end">i_DMemOut</text>
+<text class="p" x="1615" y="693" text-anchor="end">o_Ld_Data</text>
+<text class="p" x="1470" y="712" text-anchor="middle">i_rd2</text>
+<text class="p" x="1500" y="700" text-anchor="middle">i_PCplus4</text>
+<text class="p" x="1565" y="712" text-anchor="middle">i_inst</text>
+<circle cx="1500" cy="935" r="3.5" fill="#222"/>
+<path class="w" d="M1500,935 L1500,722" marker-end="url(#a)"/>
+<circle cx="1565" cy="960" r="3.5" fill="#222"/>
+<path class="w" d="M1565,960 L1565,722" marker-end="url(#a)"/>
+<path class="w" d="M1350,935 L1860,935" marker-end="url(#a)"/>
+<text class="t" x="1700" y="929" text-anchor="middle">s_PCplus4_MEM</text>
+<path class="w" d="M1350,960 L1860,960" marker-end="url(#a)"/>
+<text class="t" x="1700" y="954" text-anchor="middle">s_Inst_MEM</text>
+<rect class="top" x="1680" y="380" width="120" height="220"/>
+<text class="n" x="1740.0" y="520" text-anchor="middle">DMem</text>
+<text class="e" x="1740.0" y="535" text-anchor="middle">mem</text>
+<text class="p" x="1685" y="423" text-anchor="start">addr[11:2]</text>
+<text class="p" x="1685" y="463" text-anchor="start">data</text>
+<text class="p" x="1685" y="503" text-anchor="start">be</text>
+<text class="p" x="1685" y="543" text-anchor="start">we</text>
+<text class="p" x="1795" y="484" text-anchor="end">q</text>
+<path class="w" d="M1620,420 L1680,420" marker-end="url(#a)"/>
+<text class="t" x="1650" y="414" text-anchor="middle" style="font-size:8.5px">s_DMemAddr</text>
+<path class="w" d="M1620,460 L1680,460" marker-end="url(#a)"/>
+<text class="t" x="1650" y="454" text-anchor="middle" style="font-size:8.5px">s_DMemData</text>
+<path class="w" d="M1620,500 L1680,500" marker-end="url(#a)"/>
+<text class="t" x="1650" y="494" text-anchor="middle" style="font-size:8.5px">s_DMemBE</text>
+<path class="w" d="M1620,540 L1680,540" marker-end="url(#a)"/>
+<text class="t" x="1650" y="534" text-anchor="middle" style="font-size:8.5px">s_DMemWr</text>
+<path class="w" d="M1800,480 L1825,480 L1825,650 L1622,650" marker-end="url(#a)"/>
+<text class="t" x="1745" y="644" text-anchor="middle" style="font-size:8.5px">s_DMemOut</text>
+<path class="w" d="M1620,690 L1860,690" marker-end="url(#a)"/>
+<text class="t" x="1740" y="684" text-anchor="middle">s_Ld_Data</text>
+<path class="bus" d="M1910,230 L1960,230 L1960,660 L2000,660" marker-end="url(#ab)"/>
+<text class="tc" x="1965" y="300" text-anchor="start">ctrl_WB (4)</text>
+<rect class="b" x="2000" y="640" width="200" height="340"/>
+<text class="n" x="2100.0" y="900" text-anchor="middle">G_WB</text>
+<text class="e" x="2100.0" y="915" text-anchor="middle">WB</text>
+<text class="p" x="2005" y="663" text-anchor="start">ctrl</text>
+<text class="p" x="2005" y="693" text-anchor="start">i_Ld_Data</text>
+<text class="p" x="2005" y="883" text-anchor="start">i_ALUout</text>
+<text class="p" x="2005" y="938" text-anchor="start">i_PCplus4</text>
+<text class="p" x="2005" y="963" text-anchor="start">i_inst</text>
+<text class="p" x="2195" y="703" text-anchor="end">o_halt</text>
+<text class="p" x="2195" y="763" text-anchor="end">o_RegWr</text>
+<text class="p" x="2195" y="803" text-anchor="end">o_RegWrAddr</text>
+<text class="p" x="2195" y="843" text-anchor="end">o_RegWrData</text>
+<path class="w" d="M1910,690 L2000,690" marker-end="url(#a)"/>
+<text class="t" x="1955" y="684" text-anchor="middle" style="font-size:8.5px">s_Ld_Data_WB</text>
+<path class="w" d="M1910,880 L2000,880" marker-end="url(#a)"/>
+<text class="t" x="1955" y="874" text-anchor="middle" style="font-size:8.5px">s_aluresult_WB</text>
+<path class="w" d="M1910,935 L2000,935" marker-end="url(#a)"/>
+<text class="t" x="1955" y="929" text-anchor="middle" style="font-size:8.5px">s_PCplus4_WB</text>
+<path class="w" d="M1910,960 L2000,960" marker-end="url(#a)"/>
+<text class="t" x="1955" y="954" text-anchor="middle" style="font-size:8.5px">s_Inst_WB</text>
+<path class="f" d="M2200,700 L2225,700" marker-end="url(#af)"/>
+<text class="tf" x="2229" y="697" text-anchor="start">s_Halt</text>
+<text class="p" x="2229" y="710" text-anchor="start">→ G_IF, tb</text>
+<path class="f" d="M2200,760 L2250,760 L2250,1050 L420,1050 L420,600 L450,600" marker-end="url(#af)"/>
+<path class="f" d="M2200,800 L2240,800 L2240,1025 L430,1025 L430,630 L450,630" marker-end="url(#af)"/>
+<path class="f" d="M2200,840 L2230,840 L2230,1000 L440,1000 L440,660 L450,660" marker-end="url(#af)"/>
+<text class="tf" x="1600" y="1046" text-anchor="start">s_RegWr</text>
+<text class="tf" x="1600" y="1021" text-anchor="start">s_RegWrAddr</text>
+<text class="tf" x="1600" y="996" text-anchor="start">s_RegWrData</text>
+<circle cx="860" cy="1000" r="3.5" fill="#c2188b"/>
+<path class="f" d="M860,1000 L860,465 L885,465" marker-end="url(#af)"/>
+<circle cx="860" cy="605" r="3.5" fill="#c2188b"/>
+<path class="f" d="M860,605 L885,605" marker-end="url(#af)"/>
+<circle cx="1385" cy="1000" r="3.5" fill="#c2188b"/>
+<path class="f" d="M1385,1000 L1385,815 L1395,815" marker-end="url(#af)"/>
+<polygon class="new" points="1500,1130 1535,1143 1535,1197 1500,1210"/>
+<text class="mb" transform="translate(1522,1170.0) rotate(-90)" text-anchor="middle">G_FWD_MEM</text>
+<text class="mi" transform="translate(1533,1170.0) rotate(-90)" text-anchor="middle">mux2t1_N</text>
+<text class="m" x="1503" y="1153" text-anchor="start">0</text>
+<text class="m" x="1503" y="1193" text-anchor="start">1</text>
+<circle cx="1450" cy="880" r="3.5" fill="#222"/>
+<path class="w" d="M1450,880 L1450,1150 L1500,1150" marker-end="url(#a)"/>
+<circle cx="1475" cy="935" r="3.5" fill="#222"/>
+<path class="w" d="M1475,935 L1475,1190 L1500,1190" marker-end="url(#a)"/>
+<path class="c" d="M1517,1108 L1517,1133" marker-end="url(#ac)"/>
+<text class="tc" x="1517" y="1102" text-anchor="middle" style="font-size:9px">s_andlink_MEM</text>
+<path class="f" d="M1535,1170 L1560,1170 L1560,1080 L872,1080 L872,490 L885,490" marker-end="url(#af)"/>
+<circle cx="872" cy="630" r="3.5" fill="#c2188b"/>
+<path class="f" d="M872,630 L885,630" marker-end="url(#af)"/>
+<text class="tf" x="1150" y="1076" text-anchor="middle">s_fwd_MEM</text>
+<rect class="new" x="470" y="1130" width="230" height="120"/>
+<text class="n" x="585.0" y="1195" text-anchor="middle">G_HAZARD</text>
+<text class="e" x="585.0" y="1210" text-anchor="middle">hazard_detection</text>
+<path class="g" d="M718,1146 L700,1146" marker-end="url(#ag)"/>
+<text class="tg" x="722" y="1150" text-anchor="start">s_memread_EX</text>
+<path class="g" d="M718,1166 L700,1166" marker-end="url(#ag)"/>
+<text class="tg" x="722" y="1170" text-anchor="start">s_Inst_EX(11:7)</text>
+<path class="g" d="M718,1186 L700,1186" marker-end="url(#ag)"/>
+<text class="tg" x="722" y="1190" text-anchor="start">s_pcsrc</text>
+<path class="g" d="M718,1206 L700,1206" marker-end="url(#ag)"/>
+<text class="tg" x="722" y="1210" text-anchor="start">s_jump_EX</text>
+<path class="g" d="M718,1226 L700,1226" marker-end="url(#ag)"/>
+<text class="tg" x="722" y="1230" text-anchor="start">s_jumpreg_EX</text>
+<path class="g" d="M452,1170 L470,1170" marker-end="url(#ag)"/>
+<text class="tg" x="448" y="1174" text-anchor="end">s_Inst_ID</text>
+<path class="g" d="M490,1130 L490,1115 L100,1115 L100,622" marker-end="url(#ag)"/>
+<text class="tg" x="300" y="1111" text-anchor="middle">s_PC_stall</text>
+<path class="g" d="M520,1130 L520,1105 L345,1105 L345,982" marker-end="url(#ag)"/>
+<text class="tg" x="352" y="1101" text-anchor="start">s_IF_ID_stall</text>
+<path class="g" d="M550,1130 L550,1092 L365,1092 L365,982" marker-end="url(#ag)"/>
+<text class="tg" x="440" y="1088" text-anchor="middle">s_IF_ID_flush</text>
+<path class="g" d="M660,1130 L660,1100 L795,1100 L795,982" marker-end="url(#ag)"/>
+<text class="tg" x="725" y="1096" text-anchor="middle">s_ID_EX_flush</text>
+<path class="g" d="M600,1250 L600,1268"/>
+<text class="p" x="600" y="1280" text-anchor="middle">s_load_use, s_ctrl_taken (n/c)</text>
+<rect class="new" x="1010" y="1130" width="230" height="140"/>
+<text class="n" x="1125.0" y="1205" text-anchor="middle">G_FWD</text>
+<text class="e" x="1125.0" y="1220" text-anchor="middle">forwarding_unit</text>
+<path class="g" d="M1258,1142 L1240,1142" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1146" text-anchor="start" style="font-size:9px">s_Inst_EX(19:15)</text>
+<path class="g" d="M1258,1156 L1240,1156" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1160" text-anchor="start" style="font-size:9px">s_Inst_EX(24:20)</text>
+<path class="g" d="M1258,1170 L1240,1170" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1174" text-anchor="start" style="font-size:9px">s_Inst_MEM(11:7)</text>
+<path class="g" d="M1258,1184 L1240,1184" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1188" text-anchor="start" style="font-size:9px">s_RegWr_MEM</text>
+<path class="g" d="M1258,1198 L1240,1198" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1202" text-anchor="start" style="font-size:9px">s_memread_MEM</text>
+<path class="g" d="M1258,1212 L1240,1212" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1216" text-anchor="start" style="font-size:9px">s_Inst_MEM(24:20)</text>
+<path class="g" d="M1258,1226 L1240,1226" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1230" text-anchor="start" style="font-size:9px">s_DMemWr_MEM</text>
+<path class="g" d="M1258,1240 L1240,1240" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1244" text-anchor="start" style="font-size:9px">s_Inst_WB(11:7)</text>
+<path class="g" d="M1258,1254 L1240,1254" marker-end="url(#ag)"/>
+<text class="tg" x="1262" y="1258" text-anchor="start" style="font-size:9px">s_RegWr_WB</text>
+<path class="g" d="M1010,1150 L940,1150 L940,540 L905,540 L905,517" marker-end="url(#ag)"/>
+<text class="tg" x="980" y="1146" text-anchor="middle" style="font-size:9px">s_ForwardA</text>
+<path class="g" d="M1010,1170 L905,1170 L905,657" marker-end="url(#ag)"/>
+<text class="tg" x="960" y="1166" text-anchor="middle" style="font-size:9px">s_ForwardB</text>
+<path class="g" d="M1220,1130 L1220,1095 L1412,1095 L1412,836" marker-end="url(#ag)"/>
+<text class="tg" x="1300" y="1091" text-anchor="middle">s_ForwardM</text>
+<path class="w" d="M775,996 L775,982" marker-end="url(#a)"/>
+<text class="p" x="775" y="1007" text-anchor="middle">'0'</text>
+<path class="w" d="M1315,996 L1315,982" marker-end="url(#a)"/>
+<text class="p" x="1315" y="1007" text-anchor="middle">'0'</text>
+<path class="w" d="M1335,996 L1335,982" marker-end="url(#a)"/>
+<text class="p" x="1335" y="1007" text-anchor="middle">'0'</text>
+<path class="w" d="M1875,996 L1875,982" marker-end="url(#a)"/>
+<text class="p" x="1875" y="1007" text-anchor="middle">'0'</text>
+<path class="w" d="M1895,996 L1895,982" marker-end="url(#a)"/>
+<text class="p" x="1895" y="1007" text-anchor="middle">'0'</text>
+<rect x="20" y="1300" width="540" height="190" fill="#fff" stroke="#bbb"/>
+<text class="nh" x="32" y="1322" text-anchor="start">Legend</text>
+<path class="w" d="M32,1342 L72,1342"/>
+<text class="nt" x="82" y="1346" text-anchor="start">Data signal (32-bit or as labeled)</text>
+<path class="bus" d="M32,1362 L72,1362"/>
+<text class="nt" x="82" y="1366" text-anchor="start">Control bundle from G_ID (count in brackets)</text>
+<path class="f" d="M32,1382 L72,1382"/>
+<text class="nt" x="82" y="1386" text-anchor="start">Feedback / forwarded value to an earlier stage</text>
+<path class="g" d="M32,1402 L72,1402"/>
+<text class="nt" x="82" y="1406" text-anchor="start">Hazard / forwarding control; short stubs connect by name</text>
+<rect class="reg" x="32" y="1414" width="40" height="14"/>
+<text class="nt" x="82" y="1426" text-anchor="start">Pipeline register (stall / flush inputs on the bottom)</text>
+<rect class="new" x="32" y="1434" width="40" height="14"/>
+<text class="nt" x="82" y="1446" text-anchor="start">Hazard / forwarding component</text>
+<rect class="top" x="32" y="1454" width="40" height="14"/>
+<text class="nt" x="82" y="1466" text-anchor="start">Memory / address mux (toolflow loads IMem and DMem)</text>
+<text class="nt" x="82" y="1484" text-anchor="start">Dots are junctions; plain crossings are not connected. '0' = tied low.</text>
+<rect x="575" y="1300" width="860" height="190" fill="#fafafa" stroke="#bbb"/>
+<text class="nh" x="589" y="1322" text-anchor="start">Control bundles</text>
+<text class="nt" x="589" y="1343.0" text-anchor="start">ctrl_ID / ctrl_EX (12): Halt, RegWr, andlink, Mem2Reg, MemRd, DMemWr, jumpreg, jump, branch, alusrc,</text>
+<text class="nt" x="589" y="1361.5" text-anchor="start">     alusrca (2b), aluop (2b).  _ID names: s_Halt_ID, s_RegWr_ID, s_andlink, s_memtoreg, s_memread, ...</text>
+<text class="nt" x="589" y="1380.0" text-anchor="start">ctrl_EX (8) into G_EX_MEM: halt, RegWr, andlink, Mem2Reg, MemRd, DMemWr, jumpreg, jump (+ s_pcsrc).</text>
+<text class="nt" x="589" y="1398.5" text-anchor="start">ctrl_MEM (8) into G_MEM: the 8 above as _MEM (s_pcsrc_MEM on its own wire).</text>
+<text class="nt" x="589" y="1417.0" text-anchor="start">ctrl_MEM (4) into G_MEM_WB and ctrl_WB (4) into G_WB: halt, RegWr, andlink, Mem2Reg.</text>
+<text class="nt" x="589" y="1435.5" text-anchor="start">Taps out of bundles: s_jump_EX, s_jumpreg_EX (fetch, hazard); s_memread_EX (hazard);</text>
+<text class="nt" x="589" y="1454.0" text-anchor="start">s_RegWr_MEM, s_memread_MEM, s_DMemWr_MEM (forwarding); s_andlink_MEM (G_FWD_MEM); s_RegWr_WB.</text>
+<rect x="1450" y="1300" width="840" height="190" fill="#fafafa" stroke="#bbb"/>
+<text class="nh" x="1464" y="1322" text-anchor="start">Not drawn</text>
+<text class="nt" x="1464" y="1343.0" text-anchor="start">iCLK and iRST go to IMem, DMem, G_IF, G_ID, G_EX, G_MEM, G_WB and every pipeline register.</text>
+<text class="nt" x="1464" y="1361.5" text-anchor="start">Ports mapped to open: G_IF current_PC / o_inst; G_ID o_PC / o_PCplus4 / o_inst;</text>
+<text class="nt" x="1464" y="1380.0" text-anchor="start">G_EX pass-through outputs (halt ... jump, rd2, PCplus4, inst); G_MEM pass-through outputs.</text>
+<text class="nt" x="1464" y="1398.5" text-anchor="start">s_Ovfl &lt;= '0'.  G_FWD_A / G_FWD_B input 11 tied to 0.  s_add2out_MEM (EX_MEM) is unused.</text>
+<text class="nt" x="1464" y="1417.0" text-anchor="start">Testbench taps: s_RegWr, s_RegWrAddr, s_RegWrData, s_DMemWr, s_DMemAddr, s_DMemData,</text>
+<text class="nt" x="1464" y="1435.5" text-anchor="start">s_DMemBE, s_Halt, s_Ovfl.  oALUOut &lt;= s_aluresult.</text>
+<text class="nt" x="1464" y="1454.0" text-anchor="start">Source: src/RISCV_Processor.vhd (every instance in its architecture is shown).</text>
+</svg>
