@@ -322,11 +322,52 @@ architecture structure of RISCV_Processor is
          o_RegWrData : out std_logic_vector((DATA_WIDTH-1) downto 0));
   end component;
 
-  component org3 is
-    port(i_A : in std_logic;
-         i_B : in std_logic;
-         i_C : in std_logic;
-         o_F : out std_logic);
+  component hazard_detection is
+    port(i_inst_ID     : in std_logic_vector(31 downto 0);
+         i_MemRd_EX    : in std_logic;
+         i_rd_EX       : in std_logic_vector(4 downto 0);
+         i_pcsrc_EX    : in std_logic;
+         i_jump_EX     : in std_logic;
+         i_jumpreg_EX  : in std_logic;
+         o_PC_stall    : out std_logic;
+         o_IF_ID_stall : out std_logic;
+         o_IF_ID_flush : out std_logic;
+         o_ID_EX_flush : out std_logic;
+         o_load_use    : out std_logic;
+         o_ctrl_taken  : out std_logic);
+  end component;
+
+  component forwarding_unit is
+    port(i_rs1_EX     : in std_logic_vector(4 downto 0);
+         i_rs2_EX     : in std_logic_vector(4 downto 0);
+         i_rd_MEM     : in std_logic_vector(4 downto 0);
+         i_RegWr_MEM  : in std_logic;
+         i_MemRd_MEM  : in std_logic;
+         i_rs2_MEM    : in std_logic_vector(4 downto 0);
+         i_DMemWr_MEM : in std_logic;
+         i_rd_WB      : in std_logic_vector(4 downto 0);
+         i_RegWr_WB   : in std_logic;
+         o_ForwardA   : out std_logic_vector(1 downto 0);
+         o_ForwardB   : out std_logic_vector(1 downto 0);
+         o_ForwardM   : out std_logic);
+  end component;
+
+  component mux4t1_N is
+    generic(N : integer);
+    port(i_S  : in std_logic_vector(1 downto 0);
+         i_D0 : in std_logic_vector(N-1 downto 0);
+         i_D1 : in std_logic_vector(N-1 downto 0);
+         i_D2 : in std_logic_vector(N-1 downto 0);
+         i_D3 : in std_logic_vector(N-1 downto 0);
+         o_O  : out std_logic_vector(N-1 downto 0));
+  end component;
+
+  component mux2t1_N is
+    generic(N : integer);
+    port(i_S  : in std_logic;
+         i_D0 : in std_logic_vector(N-1 downto 0);
+         i_D1 : in std_logic_vector(N-1 downto 0);
+         o_O  : out std_logic_vector(N-1 downto 0));
   end component;
 
   signal s_PCplus4, s_PCplus4_ID, s_PCplus4_EX, s_PCplus4_MEM, s_PCplus4_WB : std_logic_vector(N-1 downto 0);
@@ -360,21 +401,81 @@ architecture structure of RISCV_Processor is
   signal s_PC_stall, s_IF_ID_stall, s_ID_EX_stall, s_EX_MEM_stall, s_MEM_WB_stall : std_logic;
   signal s_PC_flush, s_IF_ID_flush, s_ID_EX_flush, s_EX_MEM_flush, s_MEM_WB_flush : std_logic;
 
+  signal s_load_use : std_logic;
+  signal s_ForwardA, s_ForwardB : std_logic_vector(1 downto 0);
+  signal s_ForwardM : std_logic;
+  signal s_rs1_fwd_EX, s_rs2_fwd_EX : std_logic_vector(N-1 downto 0);
+  signal s_fwd_MEM, s_rd2_fwd_MEM : std_logic_vector(N-1 downto 0);
+
 begin
   s_Ovfl <= '0';
 
-  s_PC_stall     <= '0';
-  s_IF_ID_stall  <= '0';
   s_ID_EX_stall  <= '0';
   s_EX_MEM_stall <= '0';
   s_MEM_WB_stall <= '0';
   s_PC_flush     <= '0';
-  G_CTRL_TAKEN: org3 port map(i_A => s_pcsrc, i_B => s_jump_EX, i_C => s_jumpreg_EX, o_F => s_ctrl_taken);
-
-  s_IF_ID_flush  <= s_ctrl_taken;
-  s_ID_EX_flush  <= s_ctrl_taken;
   s_EX_MEM_flush <= '0';
   s_MEM_WB_flush <= '0';
+
+  G_HAZARD: hazard_detection
+    port map(i_inst_ID     => s_Inst_ID,
+             i_MemRd_EX    => s_memread_EX,
+             i_rd_EX       => s_Inst_EX(11 downto 7),
+             i_pcsrc_EX    => s_pcsrc,
+             i_jump_EX     => s_jump_EX,
+             i_jumpreg_EX  => s_jumpreg_EX,
+             o_PC_stall    => s_PC_stall,
+             o_IF_ID_stall => s_IF_ID_stall,
+             o_IF_ID_flush => s_IF_ID_flush,
+             o_ID_EX_flush => s_ID_EX_flush,
+             o_load_use    => s_load_use,
+             o_ctrl_taken  => s_ctrl_taken);
+
+  G_FWD: forwarding_unit
+    port map(i_rs1_EX     => s_Inst_EX(19 downto 15),
+             i_rs2_EX     => s_Inst_EX(24 downto 20),
+             i_rd_MEM     => s_Inst_MEM(11 downto 7),
+             i_RegWr_MEM  => s_RegWr_MEM,
+             i_MemRd_MEM  => s_memread_MEM,
+             i_rs2_MEM    => s_Inst_MEM(24 downto 20),
+             i_DMemWr_MEM => s_DMemWr_MEM,
+             i_rd_WB      => s_Inst_WB(11 downto 7),
+             i_RegWr_WB   => s_RegWr_WB,
+             o_ForwardA   => s_ForwardA,
+             o_ForwardB   => s_ForwardB,
+             o_ForwardM   => s_ForwardM);
+
+  G_FWD_A: mux4t1_N
+    generic map(N => N)
+    port map(i_S  => s_ForwardA,
+             i_D0 => s_rd1_EX,
+             i_D1 => s_RegWrData,
+             i_D2 => s_fwd_MEM,
+             i_D3 => (others => '0'),
+             o_O  => s_rs1_fwd_EX);
+
+  G_FWD_B: mux4t1_N
+    generic map(N => N)
+    port map(i_S  => s_ForwardB,
+             i_D0 => s_rd2_EX,
+             i_D1 => s_RegWrData,
+             i_D2 => s_fwd_MEM,
+             i_D3 => (others => '0'),
+             o_O  => s_rs2_fwd_EX);
+
+  G_FWD_MEM: mux2t1_N
+    generic map(N => N)
+    port map(i_S  => s_andlink_MEM,
+             i_D0 => s_aluresult_MEM,
+             i_D1 => s_PCplus4_MEM,
+             o_O  => s_fwd_MEM);
+
+  G_FWD_M: mux2t1_N
+    generic map(N => N)
+    port map(i_S  => s_ForwardM,
+             i_D0 => s_rd2_MEM,
+             i_D1 => s_RegWrData,
+             o_O  => s_rd2_fwd_MEM);
 
   with iInstLd select
     s_IMemAddr <= s_PC when '0',
@@ -509,8 +610,8 @@ begin
              i_PC      => s_PC_EX,
              i_PC_4    => s_PCplus4_EX,
              i_Imm     => s_immgen_EX,
-             i_rd1     => s_rd1_EX,
-             i_rd2     => s_rd2_EX,
+             i_rd1     => s_rs1_fwd_EX,
+             i_rd2     => s_rs2_fwd_EX,
              i_inst    => s_Inst_EX,
              i_halt    => s_Halt_EX,
              i_RegWr   => s_RegWr_EX,
@@ -558,7 +659,7 @@ begin
              i_pcsrc   => s_pcsrc,
              i_ALUout  => s_aluresult,
              i_add2out => s_add2out,
-             i_rd2     => s_rd2_EX,
+             i_rd2     => s_rs2_fwd_EX,
              i_PCplus4 => s_PCplus4_EX,
              i_inst    => s_Inst_EX,
              o_halt    => s_Halt_MEM,
@@ -591,7 +692,7 @@ begin
              i_pcsrc    => s_pcsrc_MEM,
              i_PCplus4  => s_PCplus4_MEM,
              i_ALUout   => s_aluresult_MEM,
-             i_rd2      => s_rd2_MEM,
+             i_rd2      => s_rd2_fwd_MEM,
              i_inst     => s_Inst_MEM,
              i_DMemOut  => s_DMemOut,
              o_DMemWr   => s_DMemWr,

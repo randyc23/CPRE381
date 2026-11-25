@@ -116,7 +116,7 @@ PC_next     = jumpreg_EX            ? (aluresult & ~1)
             :                         PC + 4             (Fetch_Ctrl_IF, unchanged)
 ```
 
-These are implemented in `src/Hazard/hazard_detection.vhd`, which now also takes `i_pcsrc_EX`, `i_jump_EX` and `i_jumpreg_EX`. `RISCV_Processor.vhd` already computes `s_ctrl_taken` itself and drives the IF/ID and ID/EX flushes from it. Once the hazard unit is wired in, its outputs replace those two assignments.
+These are implemented in `src/Hazard/hazard_detection.vhd` (gate-level structural; a dataflow copy is in `dataflow/`), which takes `i_pcsrc_EX`, `i_jump_EX` and `i_jumpreg_EX`. In `RISCV_Processor.vhd`, `G_HAZARD` drives `s_IF_ID_flush`, `s_ID_EX_flush` and `s_ctrl_taken` along with the load-use stalls.
 
 ### Testing
 
@@ -125,9 +125,7 @@ These are implemented in `src/Hazard/hazard_detection.vhd`, which now also takes
 - not-taken branch does nothing;
 - `ID_EX_flush` is the OR of load-use and ctrl_taken.
 
-For the full processor:
-- the unscheduled `Proj1_mergesort.s` and `grendel.s` should match RARS with no NOPs added;
-- the `_sw` versions should still pass, because their extra NOPs are flushed or run harmlessly.
+For the full processor, every valid test program matches RARS through the toolflow testbench, with no NOPs added. That includes the unscheduled `Proj1_mergesort.s` (CPI 1.36) and `grendel.s` (CPI 1.41), and the `_sw` versions, whose extra NOPs are flushed or run harmlessly. The full results table is in `Data_Hazard_Analysis.md`.
 
 ### Performance
 

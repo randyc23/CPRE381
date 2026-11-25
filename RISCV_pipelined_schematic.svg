@@ -536,7 +536,7 @@ text{paint-order:stroke;stroke:#fff;stroke-width:2.5px;stroke-linejoin:round}
 <text class="nt" x="604" y="1401" text-anchor="start">rs1 counts for R, I, load, store, branch, jalr; rs2 for R and branch.</text>
 <text class="nt" x="604" y="1420" text-anchor="start">Store data (rs2) is not counted: FWD_M forwards it in MEM instead.</text>
 <text class="nt" x="604" y="1439" text-anchor="start">rd = x0 never stalls. lui, auipc, jal and wfi read no registers.</text>
-<text class="nt" x="604" y="1458" text-anchor="start">Units are in src/Hazard; not yet wired into RISCV_Processor.vhd.</text>
+<text class="nt" x="604" y="1458" text-anchor="start">Units are in src/Hazard and wired into RISCV_Processor.vhd.</text>
 <rect x="1170" y="1318" width="570" height="178" fill="#fafafa" stroke="#bbb"/>
 <text class="nh" x="1184" y="1341" text-anchor="start">Forwarding (part b)</text>
 <text class="nt" x="1184" y="1363" text-anchor="start">FWD_A / FWD_B: 00 = ID/EX value, 01 = s_RegWrData (MEM/WB),</text>

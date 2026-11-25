@@ -541,7 +541,7 @@ text{paint-order:stroke;stroke:#fff;stroke-width:2.5px;stroke-linejoin:round}
 <text class="nt" x="604" y="1401" text-anchor="start">Control: ctrl_taken = s_pcsrc + s_jump_EX + s_jumpreg_EX (EX)</text>
 <text class="nt" x="604" y="1420" text-anchor="start">-> flush IF_ID and ID_EX (the 2 wrong-path instructions), no stall.</text>
 <text class="nt" x="604" y="1439" text-anchor="start">ID_EX_flush = load_use + ctrl_taken; the two never occur together.</text>
-<text class="nt" x="604" y="1458" text-anchor="start">Units are in src/Hazard; not yet wired into RISCV_Processor.vhd.</text>
+<text class="nt" x="604" y="1458" text-anchor="start">Units are in src/Hazard and wired into RISCV_Processor.vhd.</text>
 <rect x="1170" y="1318" width="570" height="178" fill="#fafafa" stroke="#bbb"/>
 <text class="nh" x="1184" y="1341" text-anchor="start">Forwarding (part b)</text>
 <text class="nt" x="1184" y="1363" text-anchor="start">FWD_A / FWD_B: 00 = ID/EX value, 01 = s_RegWrData (MEM/WB),</text>

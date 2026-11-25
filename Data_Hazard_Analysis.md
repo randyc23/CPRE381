@@ -196,15 +196,47 @@ Compared with the Zybook 4.7 equations, this adds:
 - the MEM-stage store-data path;
 - opcode gating, so immediate bits are never mistaken for a register number.
 
-### Testing (not integrated, per the assignment)
+### Unit testing
 
 | Testbench | Covers |
 |---|---|
 | `test/tb_forwarding_unit.vhd` | 24 directed cases (each path, EX/MEM priority, x0, RegWr = 0, load in EX/MEM, jal link, every ForwardM condition, register numbers that differ only in bit 4), plus 2000 random cases checking ForwardA, ForwardB and ForwardM against a reference model |
-| `test/tb_hazard_detection.vhd` | 18 instruction pairs: load-use on rs1/rs2, I-type immediate that looks like a register, load/store address vs. store data, branch, jalr, jal/lui/auipc/wfi, x0, non-load in EX |
+| `test/tb_hazard_detection.vhd` | 29 cases: load-use on rs1/rs2, I-type immediate that looks like a register, load/store address vs. store data, branch, jalr, jal/lui/auipc/wfi, x0, non-load in EX, register numbers that differ only in bit 4, and the control-hazard flushes from part (c) |
 
-### Integration later (part c / final datapath)
+Both units are gate-level structural (`src/Hazard/`, built from `cmp_eq_n`, `andg`, `org`, `invg`). Dataflow versions with the same entity names and ports are in `dataflow/`. That folder is outside `src` so the toolflow doesn't compile two entities with the same name. Both versions pass both testbenches.
 
-1. In EX, put a 3:1 forwarding mux in front of each operand. The rs1 mux feeds `G_MUX4T1_ALUA` D0 and `G_BRANCH_LOGIC` i_A. The rs2 mux feeds `G_MUX2T1_ALUB` D0, `G_BRANCH_LOGIC` i_B and EX `o_rd2`.
-2. In MEM, put a 2:1 mux on `GSTORE` i_data, selected by ForwardM.
-3. Drive `s_PC_stall` and `s_IF_ID_stall` from `loadUse`, and set `s_ID_EX_flush = loadUse + s_ctrl_taken` (the control flush is already wired). A load-use stall and a taken branch can't happen in the same cycle, because both need their instruction in EX. Even if they did, flush has priority over stall in every register.
+### How the units are wired in `RISCV_Processor.vhd`
+
+| Instance | Inputs | Output → destination |
+|---|---|---|
+| `G_HAZARD` (`hazard_detection`) | `s_Inst_ID`, `s_memread_EX`, `s_Inst_EX(11 downto 7)`, `s_pcsrc`, `s_jump_EX`, `s_jumpreg_EX` | `s_PC_stall` → IF (OR-ed with `s_Halt` in `G_PC_STALL`), `s_IF_ID_stall`, `s_IF_ID_flush`, `s_ID_EX_flush`, `s_ctrl_taken` |
+| `G_FWD` (`forwarding_unit`) | `s_Inst_EX(19 downto 15)`, `s_Inst_EX(24 downto 20)`, `s_Inst_MEM(11 downto 7)`, `s_RegWr_MEM`, `s_memread_MEM`, `s_Inst_MEM(24 downto 20)`, `s_DMemWr_MEM`, `s_Inst_WB(11 downto 7)`, `s_RegWr_WB` | `s_ForwardA`, `s_ForwardB`, `s_ForwardM` |
+| `G_FWD_A` (`mux4t1_N`) | D0 `s_rd1_EX`, D1 `s_RegWrData`, D2 `s_fwd_MEM`, D3 0 | `s_rs1_fwd_EX` → `G_EX` i_rd1 (ALU A mux and branch compare) |
+| `G_FWD_B` (`mux4t1_N`) | D0 `s_rd2_EX`, D1 `s_RegWrData`, D2 `s_fwd_MEM`, D3 0 | `s_rs2_fwd_EX` → `G_EX` i_rd2 (ALU B mux and branch compare) and `G_EX_MEM` i_rd2 (store data) |
+| `G_FWD_MEM` (`mux2t1_N`) | D0 `s_aluresult_MEM`, D1 `s_PCplus4_MEM`, select `s_andlink_MEM` | `s_fwd_MEM` |
+| `G_FWD_M` (`mux2t1_N`) | D0 `s_rd2_MEM`, D1 `s_RegWrData`, select `s_ForwardM` | `s_rd2_fwd_MEM` → `G_MEM` i_rd2 (`GSTORE` data) |
+
+ID/EX stall, the PC flush, and the EX/MEM and MEM/WB stall and flush are tied to `'0'`; this design never needs them.
+
+### Full-processor results
+
+Each program was run through the toolflow testbench (`tb.vhd`) on the HW processor in GHDL, and the register and memory write trace was compared with RARS using the toolflow's `dump_compare.py`. **No NOPs were added to any program.**
+
+| Program | Result | Instructions | Cycles | CPI |
+|---|---|---|---|---|
+| `addiseq` | match | 11 | 15 | 1.36 |
+| `demo1` | match | 19 | 23 | 1.21 |
+| `lab3Seq` | match | 22 | 26 | 1.18 |
+| `simplebranch` | match | 12 | 26 | 2.17 |
+| `Proj1_base_test_sw` | match | 54 | 58 | 1.07 |
+| `Proj1_cf_test_sw` | match | 180 | 240 | 1.33 |
+| `Proj1_mergesort` (unscheduled) | match | 1347 | 1836 | 1.36 |
+| `grendel` (unscheduled) | match | 2129 | 3007 | 1.41 |
+| `Proj2_mergesort_sw` | match | 1195 | 1517 | 1.27 |
+| `grendel_sw` | match | 2781 | 3125 | 1.12 |
+
+Two programs from `proj/riscv` can't be compared, and the reason isn't the pipeline:
+- `fibonacci` uses `ecall` to print. The control unit treats the SYSTEM opcode as halt, so it stops at the first `ecall`.
+- `Proj_sort_template` has an empty `sort` routine. `jal sort` jumps past the end of the program into empty memory.
+
+The same results come out with the dataflow units swapped in.
