@@ -165,6 +165,20 @@ ForwardM = DMemWr_MEM · wbValid · (rdW = rs2M)
 
 EX/MEM is checked first, so the most recent producer wins when both stages write the same register. `¬MemRd_MEM` stops a load's address from being forwarded as if it were data.
 
+**Store-data (MEM) hazard**, in lecture form. This covers a load followed immediately by a store of the loaded value:
+
+- if (EX/MEM.MemWrite and MEM/WB.RegWrite and (MEM/WB.RegisterRd ≠ 0)
+     and (MEM/WB.RegisterRd = EX/MEM.RegisterRs2))
+  ForwardM = 1
+
+  where `EX/MEM.MemWrite` = `s_DMemWr_MEM`, `MEM/WB.RegWrite` = `s_RegWr_WB`, `MEM/WB.RegisterRd` = `s_Inst_WB[11:7]` and `EX/MEM.RegisterRs2` = `s_Inst_MEM[24:20]`.
+
+No "and not (EX hazard)" term is needed. The double-hazard rule ("use the most recent") is already met:
+- When the store is in MEM, the instruction in MEM/WB is the only producer newer than the store that hasn't written the register file yet. ForwardM therefore has exactly one possible source, and it's always the most recent one.
+- ForwardM is applied after the value latched in EX, so it overrides any older value ForwardB forwarded there. In `add x1 …; lw x1 …; sw x1 …`, ForwardB first hands the store the add's (stale) x1, then ForwardM replaces it with the loaded x1.
+- This depends on EX/MEM latching the **forwarded** rs2 (`s_rs2_fwd_EX`), not the raw `s_rd2_EX`. That way a producer 2 instructions ahead still reaches the store through ForwardB.
+- ForwardM covers store **data** only. A store's address (rs1) is used in EX, so a load directly before it still needs the load-use stall.
+
 **Hazard detection unit** (`src/Hazard/hazard_detection.vhd`):
 
 ```
@@ -186,7 +200,7 @@ Compared with the Zybook 4.7 equations, this adds:
 
 | Testbench | Covers |
 |---|---|
-| `test/tb_forwarding_unit.vhd` | 20 directed cases (each path, EX/MEM priority, x0, RegWr = 0, load in EX/MEM, jal link, every ForwardM condition), plus 2000 random cases checked against a reference model |
+| `test/tb_forwarding_unit.vhd` | 24 directed cases (each path, EX/MEM priority, x0, RegWr = 0, load in EX/MEM, jal link, every ForwardM condition, register numbers that differ only in bit 4), plus 2000 random cases checking ForwardA, ForwardB and ForwardM against a reference model |
 | `test/tb_hazard_detection.vhd` | 18 instruction pairs: load-use on rs1/rs2, I-type immediate that looks like a register, load/store address vs. store data, branch, jalr, jal/lui/auipc/wfi, x0, non-load in EX |
 
 ### Integration later (part c / final datapath)
